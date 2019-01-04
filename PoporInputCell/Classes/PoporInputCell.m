@@ -152,7 +152,7 @@ static NSString * PicPhoneNumbers      = @"0123456789";
 - (void)startTimerFrom:(int)max progress:(PoporInputCellIntBlock)progressBlock finish:(PoporInputCellBlock)finishBlock {
     
     __weak typeof(self) weakSelf = self;
-    weakSelf.rBT.tag = max;
+    weakSelf.timerRecord = max;
     //全局队列    默认优先级
     dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     //定时器模式  事件源
@@ -163,16 +163,16 @@ static NSString * PicPhoneNumbers      = @"0123456789";
     dispatch_source_set_event_handler(timer, ^{
         //回调主线程，在主线程中操作UI
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (weakSelf.rBT.tag >= 0) {
+            if (weakSelf.timerRecord >= 0) {
                 weakSelf.rBT.enabled = NO;
-                weakSelf.rBT.tag --;
+                weakSelf.timerRecord --;
                 
                 if (progressBlock) {
                     if (progressBlock) {
-                        progressBlock(self, (int)weakSelf.rBT.tag);
+                        progressBlock(self, weakSelf.timerRecord);
                     }
                 }else{
-                    [weakSelf.rBT setTitle:[NSString stringWithFormat:@"(%is)后重新获取",(int)weakSelf.rBT.tag] forState:UIControlStateDisabled];
+                    [weakSelf.rBT setTitle:[NSString stringWithFormat:@"(%is)后重新获取", weakSelf.timerRecord] forState:UIControlStateDisabled];
                 }
                 
             } else {
@@ -191,7 +191,7 @@ static NSString * PicPhoneNumbers      = @"0123456789";
 }
 
 - (void)stopBTTimer {
-    self.rBT.tag = 1;
+    self.timerRecord = 1;
 }
 
 #pragma mark - tf事件类型

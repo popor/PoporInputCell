@@ -41,6 +41,8 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
 
 @property (nonatomic        ) int         textGapUnit; //钱数字间隔,一般为3|4
 
+@property (nonatomic        ) int         timerRecord; // 一个timer计时器
+
 @property (nonatomic        ) PoporInputCellType cellType;
 @property (nonatomic        ) PoporInputTfType   tfType;
 
