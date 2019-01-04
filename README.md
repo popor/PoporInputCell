@@ -24,7 +24,7 @@ pod 'PoporInputCell'
 ```
 
 <p>
-<img src="https://github.com/popor/PoporInputCell/blob/master/Example/PoporInputCell/image/screen1.png" width="100%" height="100%">
+<img src="https://github.com/popor/PoporInputCell/blob/master/Example/PoporInputCell/image/screen1.png" width="40%" height="40%">
 
 </p>
 
