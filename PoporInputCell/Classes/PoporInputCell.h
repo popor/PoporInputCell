@@ -39,6 +39,9 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
 @property (nonatomic        ) CGSize      lbtSize;
 @property (nonatomic        ) CGSize      rbtSize;
 
+@property (nonatomic        ) int         lGap; // 最左边元素到cell边界
+@property (nonatomic        ) int         rGap; // 最右边元素到cell边界
+
 @property (nonatomic        ) int         textGapUnit; //钱数字间隔,一般为3|4
 
 @property (nonatomic        ) int         timerRecord; // 一个timer计时器
@@ -65,7 +68,11 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
 @property (nonatomic, copy  ) PoporInputCellBlock       customeBlock5;
 @property (nonatomic, copy  ) PoporInputCellBlock       customeBlock6;
 
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize;
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize lGap:(int)lGap rGap:(int)rGap;
 
 - (void)setDefaultFetchCodeBT;
 - (void)startTimerFrom:(int)max progress:(PoporInputCellIntBlock)progressBlock finish:(PoporInputCellBlock)finishBlock;

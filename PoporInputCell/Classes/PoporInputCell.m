@@ -23,11 +23,25 @@ static NSString * PicPhoneNumbers      = @"0123456789";
 
 @implementation PoporInputCell
 
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    
+    return [self initWithStyle:style reuseIdentifier:reuseIdentifier cellType:0 lbtSize:CGSizeZero rbtSize:CGSizeZero lGap:15 rGap:15];
+}
+
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize {
+    
+    return [self initWithStyle:style reuseIdentifier:reuseIdentifier cellType:cellType lbtSize:lbtSize rbtSize:rbtSize lGap:15 rGap:15];
+}
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize lGap:(int)lGap rGap:(int)rGap {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.cellType  = cellType;
-        self.lbtSize   = lbtSize;
-        self.rbtSize   = rbtSize;
+        self.cellType    = cellType;
+        self.lbtSize     = lbtSize;
+        self.rbtSize     = rbtSize;
+        self.lGap        = lGap;
+        self.rGap        = rGap;
+        
         self.textGapUnit = 4;
         
         [self addViews];
@@ -45,7 +59,7 @@ static NSString * PicPhoneNumbers      = @"0123456789";
     
     int gap = 3;
     [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(15);
+        make.left.mas_equalTo(self.lGap);
         make.centerY.mas_equalTo(0);
         make.size.mas_equalTo(weakSelf.lbtSize);
         weakSelf.lBT.tag = isLBT ? gap: -gap;
@@ -72,7 +86,7 @@ static NSString * PicPhoneNumbers      = @"0123456789";
         if (isRBT) {
             make.size.mas_equalTo(weakSelf.rbtSize);
             make.centerY.mas_equalTo(0);
-            make.right.mas_equalTo(-15);
+            make.right.mas_equalTo(-self.lGap);
         }else{{
             make.size.mas_equalTo(CGSizeZero);
         }}
@@ -84,7 +98,7 @@ static NSString * PicPhoneNumbers      = @"0123456789";
         //make.centerY.mas_equalTo(0);
         make.bottom.mas_equalTo(0);
         if (!isRBT) {
-            make.right.mas_equalTo(-15);
+            make.right.mas_equalTo(-self.lGap);
         }else{
             make.right.mas_equalTo(weakSelf.rBT.mas_left).offset(-gap);
         }
