@@ -16,9 +16,18 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 PoporInputCell is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```ruby
-pod 'PoporInputCell'
 ```
+pod 'PoporInputCell'
+
+简化UITableViewCell 设定输入框，按钮等部件。包含大陆号码、钱、银行卡数字格式化。验证码倒计时等。
+
+```
+
+<p>
+<img src="https://github.com/popor/PoporInputCell/blob/master/Example/PoporInputCell/image/screen1.png" width="100%" height="100%">
+
+</p>
+
 
 ## Author
 
