@@ -57,6 +57,14 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
 
 @property (nonatomic, copy  ) PoporInputCellBlock       rbtActionBlock;
 
+// 自定义block,方便开发
+@property (nonatomic, copy  ) PoporInputCellBlock       customeBlock1;
+@property (nonatomic, copy  ) PoporInputCellBlock       customeBlock2;
+@property (nonatomic, copy  ) PoporInputCellBlock       customeBlock3;
+@property (nonatomic, copy  ) PoporInputCellBlock       customeBlock4;
+@property (nonatomic, copy  ) PoporInputCellBlock       customeBlock5;
+@property (nonatomic, copy  ) PoporInputCellBlock       customeBlock6;
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize;
 
 - (void)setDefaultFetchCodeBT;
