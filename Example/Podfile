@@ -1,0 +1,12 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'PoporInputCell_Example' do
+  pod 'PoporInputCell', :path => '../'
+
+  target 'PoporInputCell_Tests' do
+    inherit! :search_paths
+    
+  end
+end
