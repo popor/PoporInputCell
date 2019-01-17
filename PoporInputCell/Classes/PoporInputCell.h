@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "PoporInputCellTool.h"
+
 typedef NS_OPTIONS(NSUInteger, PoporInputCellType) {
     PoporInputCellTypeLBT      = 1 << 0, // 1
     PoporInputCellTypeLineView = 1 << 1, // 2
@@ -68,10 +70,19 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
 @property (nonatomic, copy  ) PoporInputCellBlock       customeBlock5;
 @property (nonatomic, copy  ) PoporInputCellBlock       customeBlock6;
 
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize;
 
+/**
+ *  设置个人信息
+ *
+ *  @param lGap 推荐使用 [PoporInputCellTool share].separatorInsetX
+ *  @param rGap 习惯上lGap = rGap
+ *
+ *  @return id
+ */
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize lGap:(int)lGap rGap:(int)rGap;
 
 - (void)setDefaultFetchCodeBT;

@@ -11,6 +11,7 @@
 #endif
 
 #import "PoporInputCell.h"
+#import "PoporInputCellTool.h"
 
 FOUNDATION_EXPORT double PoporInputCellVersionNumber;
 FOUNDATION_EXPORT const unsigned char PoporInputCellVersionString[];

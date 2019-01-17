@@ -25,13 +25,14 @@ static NSString * PicPhoneNumbers      = @"0123456789";
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
-    return [self initWithStyle:style reuseIdentifier:reuseIdentifier cellType:0 lbtSize:CGSizeZero rbtSize:CGSizeZero lGap:15 rGap:15];
+    return [self initWithStyle:style reuseIdentifier:reuseIdentifier cellType:0 lbtSize:CGSizeZero rbtSize:CGSizeZero];
 }
 
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize {
     
-    return [self initWithStyle:style reuseIdentifier:reuseIdentifier cellType:cellType lbtSize:lbtSize rbtSize:rbtSize lGap:15 rGap:15];
+    float x = [PoporInputCellTool share].separatorInsetX;
+    return [self initWithStyle:style reuseIdentifier:reuseIdentifier cellType:cellType lbtSize:lbtSize rbtSize:rbtSize lGap:x rGap:x];
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize lGap:(int)lGap rGap:(int)rGap {

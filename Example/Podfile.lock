@@ -3,7 +3,7 @@ PODS:
   - PoporFoundation/NSString (0.0.28):
     - PoporFoundation/PrefixOs
   - PoporFoundation/PrefixOs (0.0.28)
-  - PoporInputCell (0.0.04):
+  - PoporInputCell (0.0.05):
     - Masonry
     - PoporFoundation/NSString
     - PoporUI/UITextField
@@ -26,7 +26,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   PoporFoundation: fc84ffacadb2dd559c39146baff797b6c3d9f328
-  PoporInputCell: d52dc2263b7a4a977e3b50228216241af840af06
+  PoporInputCell: 43a74a18b2b6452526db4e4424405a8ccf58c65f
   PoporUI: cddf1e6fa4d1eb375c3bebf91f2f644657b930cd
 
 PODFILE CHECKSUM: b22678915f6cea615754b6e8ed4a68af37b8a60a
