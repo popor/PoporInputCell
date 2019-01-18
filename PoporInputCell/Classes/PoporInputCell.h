@@ -17,11 +17,13 @@ typedef NS_OPTIONS(NSUInteger, PoporInputCellType) {
 };
 
 typedef NS_ENUM(int, PoporInputTfType) {
-    PoporInputTfTypePassword = 1,
-    PoporInputTfTypePhone,
-    PoporInputTfTypeMoneyInt,
-    PoporInputTfTypeMoneyFloat,
-    PoporInputTfTypeBank,
+    PoporInputTfTypeNumberInt = 1, // 只限制数字输入,不进行format操作
+    PoporInputTfTypeNumberFloat, // 只限制数字输入,不进行format操作
+    PoporInputTfTypePassword,
+    PoporInputTfTypePhone,// 采用888-8888-8888约束
+    PoporInputTfTypeMoneyInt,// 采用100 0000,小数点为分界线
+    PoporInputTfTypeMoneyFloat,// 采用100 0000.0001,小数点为分界线
+    PoporInputTfTypeBank,// 采用6266 8888 8888 88,第一位为分界线
 };
 
 @class PoporInputCell;
@@ -89,11 +91,20 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
 - (void)startTimerFrom:(int)max progress:(PoporInputCellIntBlock)progressBlock finish:(PoporInputCellBlock)finishBlock;
 - (void)stopBTTimer;
 
-- (void)setTfTypeNumber;
+// 普通数字
+- (void)setTfTypeNumberInt;
+- (void)setTfTypeNumberFloat;
+
 - (void)setTfTypePhone;
+
+// 金钱格式
 - (void)setTfTypeMoneyFloat;
 - (void)setTfTypeMoneyInt;
+
+// 密码
 - (void)setTfTypePassword;
+
+// 银行卡格式
 - (void)setTfTypeBank;
 
 // 最大输入数字限制

@@ -210,9 +210,20 @@ static NSString * PicPhoneNumbers      = @"0123456789";
 }
 
 #pragma mark - tf事件类型
-- (void)setTfTypeNumber {
+- (void)setTfTypeNumberInt {
     self.tf.secureTextEntry = NO;
     self.tf.keyboardType    = UIKeyboardTypeNumberPad;
+    self.tfType             = PoporInputTfTypeNumberInt;
+}
+
+- (void)setTfTypeNumberFloat {
+    self.tf.secureTextEntry = NO;
+    self.tf.keyboardType    = UIKeyboardTypeNumberPad;
+    self.tfType             = PoporInputTfTypeNumberFloat;
+}
+
+- (void)setTfTypeNumber {
+    
 }
 
 - (void)setTfTypePhone {
@@ -262,6 +273,24 @@ static NSString * PicPhoneNumbers      = @"0123456789";
     
     NSCharacterSet *cs;
     switch (self.tfType) {
+        case PoporInputTfTypeNumberInt: {
+            cs = [[NSCharacterSet characterSetWithCharactersInString:PicPhoneNumbers] invertedSet];
+            NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+            BOOL basicTest = [string isEqualToString:filtered];
+            if(!basicTest){
+                return NO;
+            }
+            break;
+        }
+        case PoporInputTfTypeNumberFloat: {
+            cs = [[NSCharacterSet characterSetWithCharactersInString:PicMoneyNumbers] invertedSet];
+            NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+            BOOL basicTest = [string isEqualToString:filtered];
+            if(!basicTest){
+                return NO;
+            }
+            break;
+        }
         case PoporInputTfTypePassword:{
             NSString * tempString=string;
             tempString=[NSString replaceString:tempString withREG:@" " withNewString:@""];
