@@ -11,9 +11,10 @@
 #import "PoporInputCellTool.h"
 
 typedef NS_OPTIONS(NSUInteger, PoporInputCellType) {
-    PoporInputCellTypeLBT      = 1 << 0, // 1
-    PoporInputCellTypeLineView = 1 << 1, // 2
-    PoporInputCellTypeRBT      = 1 << 2, // 4
+    PoporInputCellTypeLBT          = 1 << 0,// 1
+    PoporInputCellTypeLBTAutoWidth = 1 << 1,// 2, 此项将忽略PoporInputCellTypeLBT和lBTSize.width
+    PoporInputCellTypeLineView     = 1 << 2,// 4
+    PoporInputCellTypeRBT          = 1 << 3,// 8
 };
 
 typedef NS_ENUM(int, PoporInputTfType) {

@@ -54,17 +54,32 @@ static NSString * PicPhoneNumbers      = @"0123456789";
 - (void)layoutSubviewsCustom {
     
     __weak typeof(self) weakSelf = self;
-    BOOL isLBT  = self.cellType & PoporInputCellTypeLBT;
-    BOOL isLine = self.cellType & PoporInputCellTypeLineView;
-    BOOL isRBT  = self.cellType & PoporInputCellTypeRBT;
+    BOOL isLBT     = self.cellType & PoporInputCellTypeLBT;
+    BOOL isLBTAuto = self.cellType & PoporInputCellTypeLBTAutoWidth;
+    BOOL isLine    = self.cellType & PoporInputCellTypeLineView;
+    BOOL isRBT     = self.cellType & PoporInputCellTypeRBT;
     
     int gap = 3;
-    [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.lGap);
-        make.centerY.mas_equalTo(0);
-        make.size.mas_equalTo(weakSelf.lbtSize);
-        weakSelf.lBT.tag = isLBT ? gap: -gap;
-    }];
+    if(isLBTAuto){
+        [self.lBT.titleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+        self.lBT.titleLabel.numberOfLines = 0;
+        [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.lGap);
+            make.centerY.mas_equalTo(0);
+            make.height.mas_equalTo(weakSelf.lbtSize.height);
+            //make.size.mas_equalTo(weakSelf.lbtSize);
+            weakSelf.lBT.tag = isLBT ? gap: -gap;
+        }];
+        
+    }else if (isLBT){
+        [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.lGap);
+            make.centerY.mas_equalTo(0);
+            make.size.mas_equalTo(weakSelf.lbtSize);
+            weakSelf.lBT.tag = isLBT ? gap: -gap;
+        }];
+    }
+    
     [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(weakSelf.lBT.mas_right).offset(gap + weakSelf.lBT.tag);
         if (isLine) {
