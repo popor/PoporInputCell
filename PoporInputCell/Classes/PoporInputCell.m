@@ -58,8 +58,9 @@ static NSString * PicPhoneNumbers      = @"0123456789";
     BOOL isLBTAuto = self.cellType & PoporInputCellTypeLBTAutoWidth;
     BOOL isLine    = self.cellType & PoporInputCellTypeLineView;
     BOOL isRBT     = self.cellType & PoporInputCellTypeRBT;
+    BOOL isRBTAuto = self.cellType & PoporInputCellTypeRBTAutoWidth;
     
-    int gap = 3;
+    int gap = 5;
     if(isLBTAuto){
         [self.lBT.titleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
         self.lBT.titleLabel.numberOfLines = 0;
@@ -71,7 +72,7 @@ static NSString * PicPhoneNumbers      = @"0123456789";
             weakSelf.lBT.tag = isLBT ? gap: -gap;
         }];
         
-    }else if (isLBT){
+    } else {
         [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.lGap);
             make.centerY.mas_equalTo(0);
@@ -98,25 +99,36 @@ static NSString * PicPhoneNumbers      = @"0123456789";
         }
     }];
     
-    [self.rBT mas_makeConstraints:^(MASConstraintMaker *make) {
-        if (isRBT) {
-            make.size.mas_equalTo(weakSelf.rbtSize);
+    if (isRBTAuto) {
+        [self.rBT.titleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+        self.rBT.titleLabel.numberOfLines = 0;
+        [self.rBT mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.height.mas_equalTo(weakSelf.rbtSize.height);
             make.centerY.mas_equalTo(0);
-            make.right.mas_equalTo(-self.lGap);
-        }else{{
-            make.size.mas_equalTo(CGSizeZero);
-        }}
-    }];
+            make.right.mas_equalTo(-self.rGap);
+        }];
+        
+    } else {
+        [self.rBT mas_makeConstraints:^(MASConstraintMaker *make) {
+            if (isRBT) {
+                make.size.mas_equalTo(weakSelf.rbtSize);
+                make.centerY.mas_equalTo(0);
+                make.right.mas_equalTo(-self.rGap);
+            }else{{
+                make.size.mas_equalTo(CGSizeZero);
+            }}
+        }];
+    }
     
     [self.tf mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(weakSelf.lineView.mas_right).offset(gap + weakSelf.lineView.tag);
         make.top.mas_equalTo(0);
         //make.centerY.mas_equalTo(0);
         make.bottom.mas_equalTo(0);
-        if (!isRBT) {
-            make.right.mas_equalTo(-self.lGap);
-        }else{
+        if (isRBTAuto || isRBT) {
             make.right.mas_equalTo(weakSelf.rBT.mas_left).offset(-gap);
+        }else{
+            make.right.mas_equalTo(-self.rGap);
         }
     }];
 }

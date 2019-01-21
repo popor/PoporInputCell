@@ -12,9 +12,10 @@
 
 typedef NS_OPTIONS(NSUInteger, PoporInputCellType) {
     PoporInputCellTypeLBT          = 1 << 0,// 1
-    PoporInputCellTypeLBTAutoWidth = 1 << 1,// 2, 此项将忽略PoporInputCellTypeLBT和lBTSize.width
+    PoporInputCellTypeLBTAutoWidth = 1 << 1,// 2, 将忽略PoporInputCellTypeLBT和lBTSize.width
     PoporInputCellTypeLineView     = 1 << 2,// 4
     PoporInputCellTypeRBT          = 1 << 3,// 8
+    PoporInputCellTypeRBTAutoWidth = 1 << 4,// 16, 将忽略PoporInputCellTypeRBT和rBTSize.width
 };
 
 typedef NS_ENUM(int, PoporInputTfType) {
