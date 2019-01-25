@@ -1,17 +1,25 @@
 PODS:
   - Masonry (1.1.0)
+  - PoporFoundation/NSObject (0.0.28)
   - PoporFoundation/NSString (0.0.28):
+    - PoporFoundation/PrefixOs
+  - PoporFoundation/PrefixCore (0.0.28):
     - PoporFoundation/PrefixOs
   - PoporFoundation/PrefixOs (0.0.28)
   - PoporInputCell (0.0.08):
     - Masonry
     - PoporFoundation/NSString
     - PoporUI/UITextField
-  - PoporUI/UITextField (0.0.37):
+  - PoporUI/UITextField (0.0.38):
     - PoporFoundation/NSString
+  - PoporUI/UIViewController (0.0.38):
+    - PoporFoundation/NSObject
+    - PoporFoundation/NSString
+    - PoporFoundation/PrefixCore
 
 DEPENDENCIES:
   - PoporInputCell (from `../`)
+  - PoporUI/UIViewController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -27,8 +35,8 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   PoporFoundation: fc84ffacadb2dd559c39146baff797b6c3d9f328
   PoporInputCell: f565b3402b22d16b43b8bccdea8bdaa51a3d644e
-  PoporUI: cddf1e6fa4d1eb375c3bebf91f2f644657b930cd
+  PoporUI: 682896c851aacce3f515e9f76b5b6f7ab26e0b7b
 
-PODFILE CHECKSUM: b22678915f6cea615754b6e8ed4a68af37b8a60a
+PODFILE CHECKSUM: 3729f04a9c414584db2cd6a838be1079ce66ca72
 
 COCOAPODS: 1.6.0.beta.2

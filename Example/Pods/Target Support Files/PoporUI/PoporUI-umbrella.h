@@ -14,6 +14,10 @@
 #import "UITextField+format.h"
 #import "UITextField+MaxLength.h"
 #import "UITextField+textRange.h"
+#import "UIViewController+AC.h"
+#import "UIViewController+LeeBase.h"
+#import "UIViewController+ncBar.h"
+#import "UIViewController+TapEndEdit.h"
 
 FOUNDATION_EXPORT double PoporUIVersionNumber;
 FOUNDATION_EXPORT const unsigned char PoporUIVersionString[];

@@ -10,6 +10,7 @@
 #import <Masonry/Masonry.h>
 #import "PoporInputCell.h"
 #import <PoporUI/UITextField+format.h>
+#import <PoporUI/UIViewController+TapEndEdit.h>
 
 @interface PoporInputCellViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -19,11 +20,41 @@
 
 @implementation PoporInputCellViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self startMonitorTapEdit];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [self stopMonitorTapEdit];
+}
+
+- (void)keyboardFrameChanged:(CGRect)rect duration:(CGFloat)duration show:(BOOL)show {
+    if (show) {
+        float height = rect.size.height;
+        [UIView animateWithDuration:0.25 animations:^{
+            [self.infoTV mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, height, 0));
+            }];
+        }];
+    }else{
+        [UIView animateWithDuration:0.25 animations:^{
+            [self.infoTV mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+            }];
+        }];
+    }
+}
+
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.infoTV = [self addTVs];
+    
+    [self addTapEndEditGRAction];
 }
 
 #pragma mark - UITableView
@@ -99,17 +130,14 @@
         }
         case 1: {
             if (!cell) {
-                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBTAutoWidth lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero];
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                cell.tf.textAlignment = NSTextAlignmentRight;
                 
                 [cell.lBT setTitle:@"手机号码" forState:UIControlStateNormal];
                 cell.tf.placeholder = @"请输入";
-                //[cell.rBT setTitle:@"!" forState:UIControlStateNormal];
                 
                 [cell.lBT setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-                cell.lineView.backgroundColor = [UIColor grayColor];
-                [cell.rBT setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-                
                 
                 [cell setTfTypePhone]; // 设置手机号码类型
                 cell.tf.text = @"11122223333";

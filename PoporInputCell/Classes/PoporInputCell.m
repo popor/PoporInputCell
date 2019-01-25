@@ -52,8 +52,6 @@ static NSString * PicPhoneNumbers      = @"0123456789";
 }
 
 - (void)layoutSubviewsCustom {
-    
-    __weak typeof(self) weakSelf = self;
     BOOL isLBT     = self.cellType & PoporInputCellTypeLBT;
     BOOL isLBTAuto = self.cellType & PoporInputCellTypeLBTAutoWidth;
     BOOL isLine    = self.cellType & PoporInputCellTypeLineView;
@@ -67,35 +65,34 @@ static NSString * PicPhoneNumbers      = @"0123456789";
         [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.lGap);
             make.centerY.mas_equalTo(0);
-            make.height.mas_equalTo(weakSelf.lbtSize.height);
-            //make.size.mas_equalTo(weakSelf.lbtSize);
-            weakSelf.lBT.tag = isLBT ? gap: -gap;
+            make.height.mas_equalTo(self.lbtSize.height);
+            self.lBT.tag = isLBT ? gap: -gap;
         }];
         
     } else {
         [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.lGap);
             make.centerY.mas_equalTo(0);
-            make.size.mas_equalTo(weakSelf.lbtSize);
-            weakSelf.lBT.tag = isLBT ? gap: -gap;
+            make.size.mas_equalTo(self.lbtSize);
+            self.lBT.tag = isLBT ? gap: -gap;
         }];
     }
     
     [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(weakSelf.lBT.mas_right).offset(gap + weakSelf.lBT.tag);
+        make.left.mas_equalTo(self.lBT.mas_right).offset(gap + self.lBT.tag);
         if (isLine) {
             make.width.mas_equalTo(1);
-            weakSelf.lineView.tag = gap;
+            self.lineView.tag = gap;
             if (isLBT) {
                 make.centerY.mas_equalTo(0);
-                make.height.mas_equalTo(weakSelf.lBT.mas_height);
+                make.height.mas_equalTo(self.lBT.mas_height);
             }else{
                 make.top.mas_equalTo(gap);
                 make.bottom.mas_equalTo(-gap);
             }
         }else{
             make.width.mas_equalTo(0);
-            weakSelf.lineView.tag = -gap;
+            self.lineView.tag = -gap;
         }
     }];
     
@@ -103,7 +100,7 @@ static NSString * PicPhoneNumbers      = @"0123456789";
         [self.rBT.titleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
         self.rBT.titleLabel.numberOfLines = 0;
         [self.rBT mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.height.mas_equalTo(weakSelf.rbtSize.height);
+            make.height.mas_equalTo(self.rbtSize.height);
             make.centerY.mas_equalTo(0);
             make.right.mas_equalTo(-self.rGap);
         }];
@@ -111,7 +108,7 @@ static NSString * PicPhoneNumbers      = @"0123456789";
     } else {
         [self.rBT mas_makeConstraints:^(MASConstraintMaker *make) {
             if (isRBT) {
-                make.size.mas_equalTo(weakSelf.rbtSize);
+                make.size.mas_equalTo(self.rbtSize);
                 make.centerY.mas_equalTo(0);
                 make.right.mas_equalTo(-self.rGap);
             }else{{
@@ -121,12 +118,12 @@ static NSString * PicPhoneNumbers      = @"0123456789";
     }
     
     [self.tf mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(weakSelf.lineView.mas_right).offset(gap + weakSelf.lineView.tag);
+        make.left.mas_equalTo(self.lineView.mas_right).offset(gap + self.lineView.tag);
         make.top.mas_equalTo(0);
         //make.centerY.mas_equalTo(0);
         make.bottom.mas_equalTo(0);
         if (isRBTAuto || isRBT) {
-            make.right.mas_equalTo(weakSelf.rBT.mas_left).offset(-gap);
+            make.right.mas_equalTo(self.rBT.mas_left).offset(-gap);
         }else{
             make.right.mas_equalTo(-self.rGap);
         }
@@ -211,7 +208,7 @@ static NSString * PicPhoneNumbers      = @"0123456789";
                 
                 if (progressBlock) {
                     if (progressBlock) {
-                        progressBlock(self, weakSelf.timerRecord);
+                        progressBlock(weakSelf, weakSelf.timerRecord);
                     }
                 }else{
                     [weakSelf.rBT setTitle:[NSString stringWithFormat:@"(%is)后重新获取", weakSelf.timerRecord] forState:UIControlStateDisabled];
@@ -294,10 +291,6 @@ static NSString * PicPhoneNumbers      = @"0123456789";
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    
-    //    __weak typeof(self) weakSelf = self;
-    //    __weak typeof(textField) weakTF = textField;
-    
     NSCharacterSet *cs;
     switch (self.tfType) {
         case PoporInputTfTypeNumberInt: {
