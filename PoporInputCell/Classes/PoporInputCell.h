@@ -44,7 +44,8 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
  如果size.width <= 0,则设置为自动宽度;
  如果size.width <  0,则设置make.width.mas_lessThanOrEqualTo(-size.width);
  
- 1. size.width == 0,适用于纯文本显示.假如用于文本输入输入框的可点击区域比较小,没有设置placeholder的话可能无法使用.
+ 1问题: size.width == 0,适用于纯文本显示.假如用于文本输入输入框的可点击区域比较小,没有设置placeholder的话可能无法使用;
+ 假如是电话号码输入框,而且是靠右布局,那么会发生显示不完全问题,可以设置size.width<0,或者更新masonry布局;
  
  */
 @property (nonatomic        ) CGSize      lbtSize;
