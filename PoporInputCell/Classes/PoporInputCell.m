@@ -28,7 +28,6 @@ static NSString * PicPhoneNumbers      = @"0123456789";
     return [self initWithStyle:style reuseIdentifier:reuseIdentifier cellType:0 lbtSize:CGSizeZero rbtSize:CGSizeZero];
 }
 
-
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize {
     
     float x = [PoporInputCellTool share].separatorInsetX;
@@ -49,85 +48,6 @@ static NSString * PicPhoneNumbers      = @"0123456789";
         [self layoutSubviewsCustom];
     }
     return self;
-}
-
-- (void)layoutSubviewsCustom {
-    BOOL isLBT     = self.cellType & PoporInputCellTypeLBT;
-    BOOL isLBTAuto = self.cellType & PoporInputCellTypeLBTAutoWidth;
-    BOOL isLine    = self.cellType & PoporInputCellTypeLineView;
-    BOOL isRBT     = self.cellType & PoporInputCellTypeRBT;
-    BOOL isRBTAuto = self.cellType & PoporInputCellTypeRBTAutoWidth;
-    
-    int gap = 5;
-    if(isLBTAuto){
-        [self.lBT.titleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
-        self.lBT.titleLabel.numberOfLines = 0;
-        [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.lGap);
-            make.centerY.mas_equalTo(0);
-            make.height.mas_equalTo(self.lbtSize.height);
-            self.lBT.tag = isLBT ? gap: -gap;
-        }];
-        
-    } else {
-        [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.lGap);
-            make.centerY.mas_equalTo(0);
-            make.size.mas_equalTo(self.lbtSize);
-            self.lBT.tag = isLBT ? gap: -gap;
-        }];
-    }
-    
-    [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.lBT.mas_right).offset(gap + self.lBT.tag);
-        if (isLine) {
-            make.width.mas_equalTo(1);
-            self.lineView.tag = gap;
-            if (isLBT) {
-                make.centerY.mas_equalTo(0);
-                make.height.mas_equalTo(self.lBT.mas_height);
-            }else{
-                make.top.mas_equalTo(gap);
-                make.bottom.mas_equalTo(-gap);
-            }
-        }else{
-            make.width.mas_equalTo(0);
-            self.lineView.tag = -gap;
-        }
-    }];
-    
-    if (isRBTAuto) {
-        [self.rBT.titleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
-        self.rBT.titleLabel.numberOfLines = 0;
-        [self.rBT mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.height.mas_equalTo(self.rbtSize.height);
-            make.centerY.mas_equalTo(0);
-            make.right.mas_equalTo(-self.rGap);
-        }];
-        
-    } else {
-        [self.rBT mas_makeConstraints:^(MASConstraintMaker *make) {
-            if (isRBT) {
-                make.size.mas_equalTo(self.rbtSize);
-                make.centerY.mas_equalTo(0);
-                make.right.mas_equalTo(-self.rGap);
-            }else{{
-                make.size.mas_equalTo(CGSizeZero);
-            }}
-        }];
-    }
-    
-    [self.tf mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.lineView.mas_right).offset(gap + self.lineView.tag);
-        make.top.mas_equalTo(0);
-        //make.centerY.mas_equalTo(0);
-        make.bottom.mas_equalTo(0);
-        if (isRBTAuto || isRBT) {
-            make.right.mas_equalTo(self.rBT.mas_left).offset(-gap);
-        }else{
-            make.right.mas_equalTo(-self.rGap);
-        }
-    }];
 }
 
 - (void)addViews {
@@ -169,6 +89,99 @@ static NSString * PicPhoneNumbers      = @"0123456789";
         
         self.rBT = button;
     }
+}
+
+- (void)layoutSubviewsCustom {
+    BOOL isLBT  = self.cellType & PoporInputCellTypeLBT;
+    BOOL isLine = self.cellType & PoporInputCellTypeLineView;
+    BOOL isRBT  = self.cellType & PoporInputCellTypeRBT;
+    
+    int gap = 5;
+    if (isLBT) {
+        if (self.lbtSize.width <= 0) {
+            [self.lBT.titleLabel setContentHuggingPriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisHorizontal];
+            
+            [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.mas_equalTo(self.lGap);
+                make.centerY.mas_equalTo(0);
+                make.height.mas_equalTo(self.lbtSize.height);
+                if (self.lbtSize.width < 0) {
+                    make.width.mas_lessThanOrEqualTo(-self.lbtSize.width);
+                }
+            }];
+        }else{
+            [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.mas_equalTo(self.lGap);
+                make.centerY.mas_equalTo(0);
+                make.height.mas_equalTo(self.lbtSize.height);
+                make.width.mas_equalTo(self.lbtSize.width);
+            }];
+        }
+    }else{
+        [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.lGap);
+            make.centerY.mas_equalTo(0);
+            make.size.mas_equalTo(CGSizeZero);
+        }];
+    }
+    
+    [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        if (isLine) {
+            make.left.mas_equalTo(self.lBT.mas_right).offset(gap);
+            make.width.mas_equalTo(1);
+            if (isLBT) {
+                make.centerY.mas_equalTo(0);
+                make.height.mas_equalTo(self.lBT.mas_height);
+            }else{
+                make.top.mas_equalTo(gap);
+                make.bottom.mas_equalTo(-gap);
+            }
+        }else{
+            make.left.mas_equalTo(self.lBT.mas_right);
+            make.width.mas_equalTo(0);
+        }
+    }];
+    
+    if (isRBT) {
+        if (self.rbtSize.width <= 0) {
+            [self.rBT.titleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+            self.rBT.titleLabel.numberOfLines = 0;
+            [self.rBT mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerY.mas_equalTo(0);
+                make.right.mas_equalTo(-self.rGap);
+                make.height.mas_equalTo(self.rbtSize.height);
+                if (self.rbtSize.width < 0) {
+                    make.width.mas_lessThanOrEqualTo(-self.rbtSize.width);
+                }
+            }];
+        }else{
+            [self.rBT mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerY.mas_equalTo(0);
+                make.right.mas_equalTo(-self.rGap);
+                make.height.mas_equalTo(self.rbtSize.height);
+                make.width.mas_equalTo(self.rbtSize.width);
+            }];
+        }
+    }else{
+        [self.rBT mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.mas_equalTo(0);
+            make.right.mas_equalTo(-self.rGap);
+            make.size.mas_equalTo(CGSizeZero);
+        }];
+    }
+    
+    [self.tf setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
+    [self.tf mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.lBT.mas_right).offset(gap*2 + 1);
+        
+        make.top.mas_equalTo(0);
+        make.bottom.mas_equalTo(0);
+        if (isRBT) {
+            make.right.mas_equalTo(self.rBT.mas_left).offset(-gap);
+        }else{
+            make.right.mas_equalTo(-self.rGap);
+        }
+    }];
 }
 
 - (void)btAction {

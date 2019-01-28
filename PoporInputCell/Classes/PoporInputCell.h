@@ -11,11 +11,9 @@
 #import "PoporInputCellTool.h"
 
 typedef NS_OPTIONS(NSUInteger, PoporInputCellType) {
-    PoporInputCellTypeLBT          = 1 << 0,// 1
-    PoporInputCellTypeLBTAutoWidth = 1 << 1,// 2, 将忽略PoporInputCellTypeLBT和lBTSize.width
-    PoporInputCellTypeLineView     = 1 << 2,// 4
-    PoporInputCellTypeRBT          = 1 << 3,// 8
-    PoporInputCellTypeRBTAutoWidth = 1 << 4,// 16, 将忽略PoporInputCellTypeRBT和rBTSize.width
+    PoporInputCellTypeLBT      = 1 << 0,
+    PoporInputCellTypeLineView = 1 << 1,
+    PoporInputCellTypeRBT      = 1 << 2,
 };
 
 typedef NS_ENUM(int, PoporInputTfType) {
@@ -42,6 +40,13 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
 @property (nonatomic, strong) UITextField * tf;
 @property (nonatomic, strong) UIButton    * rBT;
 
+/*
+ 如果size.width <= 0,则设置为自动宽度;
+ 如果size.width <  0,则设置make.width.mas_lessThanOrEqualTo(-size.width);
+ 
+ 1. size.width == 0,适用于纯文本显示.假如用于文本输入输入框的可点击区域比较小,没有设置placeholder的话可能无法使用.
+ 
+ */
 @property (nonatomic        ) CGSize      lbtSize;
 @property (nonatomic        ) CGSize      rbtSize;
 
