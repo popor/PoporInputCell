@@ -88,9 +88,6 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
 @property (nonatomic, copy  ) PoporInputCellBlock       customeBlock5;
 @property (nonatomic, copy  ) PoporInputCellBlock       customeBlock6;
 
-
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
-
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize;
 
 /**

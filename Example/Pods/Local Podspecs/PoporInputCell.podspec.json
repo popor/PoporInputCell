@@ -1,6 +1,6 @@
 {
   "name": "PoporInputCell",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "summary": "简化UITableViewCell 设定输入框，按钮等部件。包含大陆号码、钱、银行卡数字格式化。验证码倒计时等。",
   "homepage": "https://github.com/popor/PoporInputCell",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporInputCell.git",
-    "tag": "0.0.12"
+    "tag": "0.0.13"
   },
   "platforms": {
     "ios": "8.0"
