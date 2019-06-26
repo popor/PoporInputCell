@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "PoporInputCellTool.h"
+#import "PoporTextViewCell.h"
 
 typedef NS_OPTIONS(NSUInteger, PoporInputCellType) {
     PoporInputCellTypeLBT      = 1 << 0,
@@ -39,6 +40,11 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
 @property (nonatomic, strong) UIView      * lineView;
 @property (nonatomic, strong) UITextField * tf;
 @property (nonatomic, strong) UIButton    * rBT;
+
+@property (nonatomic, strong) UIView      * view1;
+@property (nonatomic, strong) UIView      * view2;
+@property (nonatomic, strong) UIView      * view3;
+@property (nonatomic, strong) UIView      * view4;
 
 /*
  如果size.width <= 0,则设置为自动宽度;

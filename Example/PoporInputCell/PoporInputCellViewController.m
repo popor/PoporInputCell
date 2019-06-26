@@ -91,7 +91,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 11) {
+        return 160;
+    }
     return 50;
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -103,276 +107,325 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString * CellID = [NSString stringWithFormat:@"%li", indexPath.row];
-    PoporInputCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];
-    BOOL isInit = cell ? NO:YES;
-    switch (indexPath.row) {
-        case 0: {
-            if (!cell) {
-                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (indexPath.row <= 10) {
+        NSString * CellID = [NSString stringWithFormat:@"%li", indexPath.row];
+        PoporInputCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+        BOOL isInit = cell ? NO:YES;
+        switch (indexPath.row) {
+            case 0: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    
+                    [cell.lBT setTitle:@"姓名" forState:UIControlStateNormal];
+                    cell.tf.placeholder = @"请输入";
+                    [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
+                    
+                    [cell.lBT setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+                    cell.lineView.backgroundColor = [UIColor grayColor];
+                    [cell.rBT setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+                    
+                    
+                    cell.editTFBlock = ^(PoporInputCell *cell, NSString *text) {
+                        // 设置text
+                    };
+                }
                 
-                [cell.lBT setTitle:@"姓名" forState:UIControlStateNormal];
-                cell.tf.placeholder = @"请输入";
-                [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
-                
-                [cell.lBT setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-                cell.lineView.backgroundColor = [UIColor grayColor];
-                [cell.rBT setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-                
-                
-                cell.editTFBlock = ^(PoporInputCell *cell, NSString *text) {
-                    // 设置text
-                };
+                break;
             }
-            
-            break;
-        }
-        case 1: {
-            if (!cell) {
-                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeLineView  lbtSize:CGSizeMake(-100, 40) rbtSize:CGSizeZero];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                cell.tf.textAlignment = NSTextAlignmentRight;
+            case 1: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeLineView  lbtSize:CGSizeMake(-100, 40) rbtSize:CGSizeZero];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    cell.tf.textAlignment = NSTextAlignmentRight;
+                    
+                    [cell.lBT setTitle:@"手机号码" forState:UIControlStateNormal];
+                    cell.tf.placeholder = @"请输入";
+                    
+                    [cell.lBT setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+                    
+                    [cell setTfTypePhone]; // 设置手机号码类型
+                    cell.tf.text = @"11122223333";
+                    
+                    cell.editTFBlock = ^(PoporInputCell *cell, NSString *text) {
+                        // 设置text
+                    };
+                }
                 
-                [cell.lBT setTitle:@"手机号码" forState:UIControlStateNormal];
-                cell.tf.placeholder = @"请输入";
-                
-                [cell.lBT setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-                
-                [cell setTfTypePhone]; // 设置手机号码类型
-                cell.tf.text = @"11122223333";
-                
-                cell.editTFBlock = ^(PoporInputCell *cell, NSString *text) {
-                    // 设置text
-                };
+                [cell.tf formatChinaPhone];
+                break;
             }
-        
-            [cell.tf formatChinaPhone];    
-            break;
-        }
-        case 2: {
-            if (!cell) {
-                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(100, 40)];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            case 2: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(100, 40)];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    
+                    [cell.lBT setTitle:@"验证码" forState:UIControlStateNormal];
+                    cell.tf.placeholder = @"请输入";
+                    
+                    [cell setDefaultFetchCodeBT];
+                    cell.rBT.titleLabel.font = [UIFont systemFontOfSize:12];
+                    
+                    cell.rbtActionBlock = ^(PoporInputCell *piCell) {
+                        [piCell startTimerFrom:60 progress:^(PoporInputCell *piCell, int intValue) {
+                            [piCell.rBT setTitle:[NSString stringWithFormat:@"(%is)后重新获取", intValue] forState:UIControlStateDisabled];
+                        } finish:^(PoporInputCell *piCell) {
+                            
+                        }];
+                    };
+                    
+                }
+                break;
+            }
+            case 3: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    
+                    [cell.lBT setTitle:@"密码" forState:UIControlStateNormal];
+                    cell.tf.placeholder = @"请输入";
+                    [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
+                    
+                    [cell setTfTypePassword];
+                    cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) { };
+                }
                 
-                [cell.lBT setTitle:@"验证码" forState:UIControlStateNormal];
-                cell.tf.placeholder = @"请输入";
-
-                [cell setDefaultFetchCodeBT];
-                cell.rBT.titleLabel.font = [UIFont systemFontOfSize:12];
-                
-                cell.rbtActionBlock = ^(PoporInputCell *piCell) {
-                    [piCell startTimerFrom:60 progress:^(PoporInputCell *piCell, int intValue) {
-                        [piCell.rBT setTitle:[NSString stringWithFormat:@"(%is)后重新获取", intValue] forState:UIControlStateDisabled];
-                    } finish:^(PoporInputCell *piCell) {
+                break;
+            }
+            case 4: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    
+                    [cell.lBT setTitle:@"禁止输入" forState:UIControlStateNormal];
+                    cell.tf.placeholder = @"请输入";
+                    [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
+                    
+                    cell.editTFEnableBlock = ^BOOL(PoporInputCell *cell) {
+                        //if (condition) {
+                        //    statements
+                        //}
+                        return NO;
+                    };
+                }
+                break;
+            }
+            case 5: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    cell.textGapUnit = 4;
+                    
+                    [cell.lBT setTitle:@"金额小数" forState:UIControlStateNormal];
+                    cell.tf.placeholder = @"请输入";
+                    [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
+                    
+                    [cell setTfTypeMoneyFloat];
+                    cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
                         
+                    };
+                    cell.tf.text = @"100000.40";
+                    
+                }
+                
+                [cell.tf formatMoneyUnit:4];
+                
+                break;
+            }
+            case 6: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    cell.textGapUnit = 4;
+                    
+                    [cell.lBT setTitle:@"金额整数" forState:UIControlStateNormal];
+                    cell.tf.placeholder = @"请输入";
+                    [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
+                    
+                    [cell setTfTypeMoneyInt];
+                    cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
+                        
+                    };
+                    cell.tf.text = @"1000000";
+                    
+                }
+                
+                [cell.tf formatMoneyUnit:4];
+                
+                break;
+            }
+            case 7: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    
+                    [cell.lBT setTitle:@"最多5字节" forState:UIControlStateNormal];
+                    cell.tf.placeholder = @"请输入";
+                    [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
+                    
+                    cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
+                        
+                    };
+                    
+                    [cell setMaxLength:5 maxBlock:^(PoporInputCell *piCell, int intValue) {
+                        //alert(@"some string");
+                        NSLog(@"超多了最多 %i 字节", intValue);
                     }];
-                };
-                
-            }
-            break;
-        }
-        case 3: {
-            if (!cell) {
-                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                
-                [cell.lBT setTitle:@"密码" forState:UIControlStateNormal];
-                cell.tf.placeholder = @"请输入";
-                [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
-                
-                [cell setTfTypePassword];
-                cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) { };
-            }
-            
-            break;
-        }
-        case 4: {
-            if (!cell) {
-                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                
-                [cell.lBT setTitle:@"禁止输入" forState:UIControlStateNormal];
-                cell.tf.placeholder = @"请输入";
-                [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
-                
-                cell.editTFEnableBlock = ^BOOL(PoporInputCell *cell) {
-                    //if (condition) {
-                    //    statements
-                    //}
-                    return NO;
-                };
-            }
-            break;
-        }
-        case 5: {
-            if (!cell) {
-                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                cell.textGapUnit = 4;
-                
-                [cell.lBT setTitle:@"金额小数" forState:UIControlStateNormal];
-                cell.tf.placeholder = @"请输入";
-                [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
-                
-                [cell setTfTypeMoneyFloat];
-                cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
                     
-                };
-                cell.tf.text = @"100000.40";
+                }
                 
+                [cell.tf formatMoneyUnit:4];
+                
+                break;
             }
-            
-            [cell.tf formatMoneyUnit:4];
-            
-            break;
-        }
-        case 6: {
-            if (!cell) {
-                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                cell.textGapUnit = 4;
-                
-                [cell.lBT setTitle:@"金额整数" forState:UIControlStateNormal];
-                cell.tf.placeholder = @"请输入";
-                [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
-                
-                [cell setTfTypeMoneyInt];
-                cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
+            case 8: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    cell.textGapUnit = 4;
                     
-                };
-                cell.tf.text = @"1000000";
-                
-            }
-            
-            [cell.tf formatMoneyUnit:4];
-            
-            break;
-        }
-        case 7: {
-            if (!cell) {
-                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                
-                [cell.lBT setTitle:@"最多5字节" forState:UIControlStateNormal];
-                cell.tf.placeholder = @"请输入";
-                [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
-                
-                cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
+                    [cell.lBT setTitle:@"简单银行卡" forState:UIControlStateNormal];
+                    cell.tf.placeholder = @"请输入";
+                    [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
                     
-                };
-                
-                [cell setMaxLength:5 maxBlock:^(PoporInputCell *piCell, int intValue) {
-                    //alert(@"some string");
-                    NSLog(@"超多了最多 %i 字节", intValue);
-                }];
-                
-            }
-            
-            [cell.tf formatMoneyUnit:4];
-            
-            break;
-        }
-        case 8: {
-            if (!cell) {
-                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                cell.textGapUnit = 4;
-                
-                [cell.lBT setTitle:@"简单银行卡" forState:UIControlStateNormal];
-                cell.tf.placeholder = @"请输入";
-                [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
-                
-                [cell setTfTypeBank];
-                
-                cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
+                    [cell setTfTypeBank];
                     
-                };
-                
-            }
-            
-            [cell.tf formatBankUnit:4];
-            
-            break;
-        }
-        case 9: {
-            if (!cell) {
-                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                cell.tf.textAlignment = NSTextAlignmentRight;
-                
-                cell.textGapUnit = 4;
-                
-                [cell.lBT setTitle:@"简单银行卡" forState:UIControlStateNormal];
-                cell.tf.placeholder = @"请输入";
-                [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
-                
-                [cell setTfTypeBank];
-                
-                cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
+                    cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
+                        
+                    };
                     
-                };
+                }
+                
+                [cell.tf formatBankUnit:4];
+                
+                break;
             }
-            
-            [cell.tf formatBankUnit:4];
-            
-            break;
-        }
-        case 10: {
-            if (!cell) {
-                cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT lbtSize:CGSizeMake(0, 40) rbtSize:CGSizeZero];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                cell.tf.textAlignment = NSTextAlignmentRight;
-                
-                cell.textGapUnit = 4;
-                
-                [cell.lBT setTitle:@"简单银行卡------" forState:UIControlStateNormal];
-                cell.tf.placeholder = @"请输入123";
-                
-                [cell setTfTypeBank];
-                
-                cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
+            case 9: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    cell.tf.textAlignment = NSTextAlignmentRight;
                     
-                };
+                    cell.textGapUnit = 4;
+                    
+                    [cell.lBT setTitle:@"简单银行卡" forState:UIControlStateNormal];
+                    cell.tf.placeholder = @"请输入";
+                    [cell.rBT setTitle:@"!" forState:UIControlStateNormal];
+                    
+                    [cell setTfTypeBank];
+                    
+                    cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
+                        
+                    };
+                }
+                
+                [cell.tf formatBankUnit:4];
+                
+                break;
             }
-            
-            [cell.tf formatBankUnit:4];
-            
-            break;
+            case 10: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT lbtSize:CGSizeMake(0, 40) rbtSize:CGSizeZero];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    cell.tf.textAlignment = NSTextAlignmentRight;
+                    
+                    cell.textGapUnit = 4;
+                    
+                    [cell.lBT setTitle:@"简单银行卡------" forState:UIControlStateNormal];
+                    cell.tf.placeholder = @"请输入123";
+                    
+                    [cell setTfTypeBank];
+                    
+                    cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
+                        
+                    };
+                }
+                
+                [cell.tf formatBankUnit:4];
+                
+                break;
+            }
+            default:{
+                UITableViewCell * dcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
+                dcell.textLabel.text = [NSString stringWithFormat:@"%li", indexPath.row];
+                
+                return dcell;
+                break;
+            }
         }
-        default:{
-            UITableViewCell * dcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
-            dcell.textLabel.text = [NSString stringWithFormat:@"%li", indexPath.row];
+        if (isInit) {
+            UILabel * oneL = ({
+                UILabel * l = [UILabel new];
+                l.frame              = CGRectMake(0, 0, 25, 50);
+                l.backgroundColor    = [UIColor clearColor];
+                l.font               = [UIFont systemFontOfSize:14];
+                l.textColor          = [UIColor redColor];
+                
+                [cell addSubview:l];
+                l;
+            });
+            oneL.text = [NSString stringWithFormat:@"%li", indexPath.row];
             
-            return dcell;
-            break;
+            [cell.lBT setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:1 alpha:0.5]];
+            [cell.lBT setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            
+            cell.tf.backgroundColor = [UIColor colorWithRed:0.5 green:0 blue:0.5 alpha:0.5];
+            
+            [cell.rBT setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:1 alpha:0.5]];
+            [cell.rBT setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            
+            cell.lineView.backgroundColor = [UIColor redColor];
         }
+        
+        return cell;
+    }else{
+        NSString * CellID = [NSString stringWithFormat:@"%li", indexPath.row];
+        PoporTextViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+        BOOL isInit = cell ? NO:YES;
+        switch (indexPath.row) {
+            case 11: {
+                if (!cell) {
+                    cell = [[PoporTextViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    
+                    __weak typeof(cell) weakCell = cell;
+                    [cell setMasBlockButton:^(MASConstraintMaker *make) {
+                        make.top.mas_equalTo(10);
+                        make.left.mas_equalTo(16);
+                        //make.bottom.mas_equalTo(-20);
+                        make.right.mas_equalTo(-16);
+                        make.height.mas_equalTo(20);
+                        
+                    } masBlockTextView:^(MASConstraintMaker *make) {
+                        
+                        make.top.mas_equalTo(weakCell.button.mas_bottom).mas_offset(0);
+                        make.left.mas_equalTo(weakCell.button.mas_left).mas_offset(-6);
+                        make.bottom.mas_equalTo(-20);
+                        make.right.mas_equalTo(weakCell.button.mas_right).mas_offset(6);
+                    }];
+                }
+                [cell.button setTitle:@"备注" forState:UIControlStateNormal];
+                [cell.button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                
+                cell.textView.placeholder = @"2019年6月26日讯，华为轮值董事长胡厚崑今日在上海2019MWC会上说，截至目前，华为已在全球发货15万个5G基站，年底达到50万个5G基站。华为50个全球5G合同中，有28个来自欧洲。近期华为 Mate X 5G手机会正式上市。";
+                
+                break;
+            }
+            default:{
+                UITableViewCell * dcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
+                dcell.textLabel.text = [NSString stringWithFormat:@"%li", indexPath.row];
+                
+                return dcell;
+                break;
+            }
+        }
+        if (isInit) {
+            
+        }
+        
+        return cell;
     }
-    if (isInit) {
-        UILabel * oneL = ({
-            UILabel * l = [UILabel new];
-            l.frame              = CGRectMake(0, 0, 25, 50);
-            l.backgroundColor    = [UIColor clearColor];
-            l.font               = [UIFont systemFontOfSize:14];
-            l.textColor          = [UIColor redColor];
-      
-            [cell addSubview:l];
-            l;
-        });
-        oneL.text = [NSString stringWithFormat:@"%li", indexPath.row];
-        
-        [cell.lBT setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:1 alpha:0.5]];
-        [cell.lBT setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        
-        cell.tf.backgroundColor = [UIColor colorWithRed:0.5 green:0 blue:0.5 alpha:0.5];
-        
-        [cell.rBT setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:1 alpha:0.5]];
-        [cell.rBT setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        
-        cell.lineView.backgroundColor = [UIColor redColor];
-    }
-
-    return cell;
+    
 }
 
 #pragma mark - UITableViewDelegate
