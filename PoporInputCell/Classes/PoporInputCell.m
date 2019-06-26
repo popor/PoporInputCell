@@ -96,7 +96,7 @@ static NSString * PicPhoneNumbers      = @"0123456789";
     BOOL isLine = self.cellType & PoporInputCellTypeLineView;
     BOOL isRBT  = self.cellType & PoporInputCellTypeRBT;
     
-    int gap = 5;
+    int gap = PoporInputInnerGap;
     if (isLBT) {
         if (self.lbtSize.width <= 0) {
             [self.lBT.titleLabel setContentHuggingPriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisHorizontal];
@@ -139,6 +139,8 @@ static NSString * PicPhoneNumbers      = @"0123456789";
         }else{
             make.left.mas_equalTo(self.lBT.mas_right);
             make.width.mas_equalTo(0);
+            make.centerY.mas_equalTo(0);
+            make.height.mas_equalTo(0);
         }
     }];
     

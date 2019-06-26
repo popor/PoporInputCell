@@ -51,7 +51,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     self.infoTV = [self addTVs];
     
     [self addTapEndEditGRAction];
@@ -87,11 +87,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return 30;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 11) {
+    if (indexPath.row == 21) {
         return 160;
     }
     return 50;
@@ -107,7 +107,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row <= 10) {
+    if (indexPath.row < 21) {
         NSString * CellID = [NSString stringWithFormat:@"%li", indexPath.row];
         PoporInputCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];
         BOOL isInit = cell ? NO:YES;
@@ -345,6 +345,54 @@
                 
                 break;
             }
+            case 11: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    isInit = YES;
+                    
+                    [cell.lBT setTitle:@"车牌号" forState:UIControlStateNormal];
+                    [cell.lBT setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                    
+                    cell.view1 = ({
+                        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+                        [button setTitle:@"京 ▼" forState:UIControlStateNormal];
+                        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                        [button setBackgroundColor:[UIColor whiteColor]];
+                        
+                        button.titleLabel.font = [UIFont systemFontOfSize:13];
+                        button.layer.cornerRadius = 4;
+                        button.layer.borderColor = [UIColor redColor].CGColor;
+                        button.layer.borderWidth = 0.5;
+                        button.clipsToBounds = YES;
+                        
+                        [cell addSubview:button];
+                        
+                        button;
+                    });
+                    
+                    [cell.view1 mas_makeConstraints:^(MASConstraintMaker *make) {
+                        make.centerY.mas_equalTo(cell.lBT.mas_centerY);
+                        make.left.mas_equalTo(cell.lineView.mas_right).mas_offset(11);
+                        make.width.mas_equalTo(50);
+                    }];
+                    
+                    [cell.tf mas_remakeConstraints:^(MASConstraintMaker *make) {
+                        make.left.mas_equalTo(cell.view1.mas_right).mas_offset(11);
+                        
+                        make.top.mas_equalTo(0);
+                        make.bottom.mas_equalTo(0);
+                        make.right.mas_equalTo(-cell.rGap);
+                    }];
+                    
+                    cell.tf.placeholder = @"请输入";
+                    cell.editTFBlock = ^(PoporInputCell * _Nonnull piCell, NSString * _Nonnull string) {
+                        
+                    };
+                }
+                
+                break;
+            }
             default:{
                 UITableViewCell * dcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
                 dcell.textLabel.text = [NSString stringWithFormat:@"%li", indexPath.row];
@@ -383,7 +431,7 @@
         PoporTextViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];
         BOOL isInit = cell ? NO:YES;
         switch (indexPath.row) {
-            case 11: {
+            case 21: {
                 if (!cell) {
                     cell = [[PoporTextViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
