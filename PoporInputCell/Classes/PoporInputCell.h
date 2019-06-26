@@ -11,6 +11,8 @@
 #import "PoporInputCellTool.h"
 #import "PoporTextViewCell.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_OPTIONS(NSUInteger, PoporInputCellType) {
     PoporInputCellTypeLBT      = 1 << 0,
     PoporInputCellTypeLineView = 1 << 1,
@@ -125,3 +127,5 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
 - (void)setMaxLength:(int)maxLength maxBlock:(PoporInputCellIntBlock)maxBlock;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PoporInputCell'
-  s.version          = '0.0.11'
+  s.version          = '0.0.12'
   s.summary          = '简化UITableViewCell 设定输入框，按钮等部件。包含大陆号码、钱、银行卡数字格式化。验证码倒计时等。'
 
   s.homepage         = 'https://github.com/popor/PoporInputCell'

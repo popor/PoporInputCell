@@ -16,16 +16,10 @@ typedef void(^BlockPoporTextViewCell) (MASConstraintMaker * make);
 
 @interface PoporTextViewCell : UITableViewCell
 
-//@property (nonatomic, copy  ) BlockPoporTextViewCell masBlockButton;
-//@property (nonatomic, copy  ) BlockPoporTextViewCell masBlockTextView;
-
 @property (nonatomic, strong) UIButton * button;
 @property (nonatomic, strong) UIPlaceHolderTextView * textView;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
-
 - (void)setMasBlockButton:(BlockPoporTextViewCell)masBlockButton masBlockTextView:(BlockPoporTextViewCell)masBlockTextView;
-
 
 @end
 
