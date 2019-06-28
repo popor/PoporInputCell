@@ -19,6 +19,11 @@ typedef void(^BlockPoporTextViewCell) (MASConstraintMaker * make);
 @property (nonatomic, strong) UIButton * button;
 @property (nonatomic, strong) UIPlaceHolderTextView * textView;
 
+@property (nonatomic, strong) UIView * view1;
+@property (nonatomic, strong) UIView * view2;
+@property (nonatomic, strong) UIView * view3;
+@property (nonatomic, strong) UIView * view4;
+
 - (void)setMasBlockButton:(BlockPoporTextViewCell)masBlockButton masBlockTextView:(BlockPoporTextViewCell)masBlockTextView;
 
 @end
