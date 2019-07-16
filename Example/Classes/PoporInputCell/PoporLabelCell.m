@@ -24,26 +24,25 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        
+        self.button = ({
+            UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+            
+            [self.contentView addSubview:button];
+            
+            button;
+        });
+        self.label = ({
+            UILabel * l = [UILabel new];
+            l.numberOfLines = 0;
+            [self.contentView addSubview:l];
+            
+            l;
+        });
     }
     return self;
 }
 
 - (void)setMasBlockButton:(BlockPoporLabelCell)masBlockButton masBlockLabel:(BlockPoporLabelCell)masBlockLabel {
-    self.button = ({
-        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-        
-        [self.contentView addSubview:button];
-        
-        button;
-    });
-    self.label = ({
-        UILabel * l = [UILabel new];
-        l.numberOfLines = 0;
-        [self.contentView addSubview:l];
-        
-        l;
-    });
     
     self.button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [self.button mas_makeConstraints:masBlockButton];
