@@ -113,7 +113,7 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
  *  @param lGap 推荐使用 [PoporInputCellTool share].separatorInsetX
  *  @param rGap 习惯上lGap = rGap
  *  @param cellH 适用于 tableView: estimatedHeightForRowAtIndexPath:
- *  @param cellH 适用于 tableView: estimatedHeightForRowAtIndexPath:, 如果<=0 则等于cellH
+ *  @param tfH 适用于 tableView: estimatedHeightForRowAtIndexPath:, 如果<=0 则等于cellH
  *  @return id
  */
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize lGap:(int)lGap rGap:(int)rGap cellH:(int)cellH tfH:(int)tfH;
