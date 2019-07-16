@@ -35,12 +35,18 @@ static NSString * PicPhoneNumbers      = @"0123456789";
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize lGap:(int)lGap rGap:(int)rGap {
+    return [self initWithStyle:style reuseIdentifier:reuseIdentifier cellType:cellType lbtSize:lbtSize rbtSize:rbtSize lGap:lGap rGap:rGap cellH:-1 tfH:-1];
+}
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize lGap:(int)lGap rGap:(int)rGap cellH:(int)cellH tfH:(int)tfH{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.cellType    = cellType;
         self.lbtSize     = lbtSize;
         self.rbtSize     = rbtSize;
         self.lGap        = lGap;
         self.rGap        = rGap;
+        self.cellH       = cellH;
+        self.tfH         = tfH;
         
         self.textGapUnit = 4;
         
@@ -103,8 +109,18 @@ static NSString * PicPhoneNumbers      = @"0123456789";
             
             [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.mas_equalTo(self.lGap);
-                make.centerY.mas_equalTo(0);
-                make.height.mas_equalTo(self.lbtSize.height);
+                
+                if (self.cellH > self.lbtSize.height && self.lbtSize.height > 0) {
+                    float gap = (self.cellH-self.lbtSize.height)/2.0f;
+                    
+                    make.top.mas_equalTo(gap);
+                    make.height.mas_equalTo(self.lbtSize.height);
+                    make.bottom.mas_equalTo(-gap);
+                    
+                }else{
+                    make.centerY.mas_equalTo(0);
+                }
+                
                 if (self.lbtSize.width < 0) {
                     make.width.mas_lessThanOrEqualTo(-self.lbtSize.width);
                 }
@@ -112,8 +128,18 @@ static NSString * PicPhoneNumbers      = @"0123456789";
         }else{
             [self.lBT mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.mas_equalTo(self.lGap);
-                make.centerY.mas_equalTo(0);
-                make.height.mas_equalTo(self.lbtSize.height);
+                
+                if (self.cellH > self.lbtSize.height && self.lbtSize.height > 0) {
+                    float gap = (self.cellH-self.lbtSize.height)/2.0f;
+                    
+                    make.top.mas_equalTo(gap);
+                    make.height.mas_equalTo(self.lbtSize.height);
+                    make.bottom.mas_equalTo(-gap);
+                    
+                }else{
+                    make.centerY.mas_equalTo(0);
+                }
+                
                 make.width.mas_equalTo(self.lbtSize.width);
             }];
         }
@@ -149,18 +175,40 @@ static NSString * PicPhoneNumbers      = @"0123456789";
             [self.rBT.titleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
             self.rBT.titleLabel.numberOfLines = 0;
             [self.rBT mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.mas_equalTo(0);
+                
                 make.right.mas_equalTo(-self.rGap);
-                make.height.mas_equalTo(self.rbtSize.height);
+                
+                if (self.cellH>self.rbtSize.height && self.rbtSize.height>0) {
+                    float gap = (self.cellH-self.rbtSize.height)/2.0f;
+                    
+                    make.top.mas_equalTo(gap);
+                    make.height.mas_equalTo(self.rbtSize.height);
+                    make.bottom.mas_equalTo(-gap);
+                    
+                }else{
+                    make.centerY.mas_equalTo(0);
+                }
+                
                 if (self.rbtSize.width < 0) {
                     make.width.mas_lessThanOrEqualTo(-self.rbtSize.width);
                 }
             }];
         }else{
             [self.rBT mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.mas_equalTo(0);
+                
                 make.right.mas_equalTo(-self.rGap);
-                make.height.mas_equalTo(self.rbtSize.height);
+                
+                if (self.cellH>self.rbtSize.height && self.rbtSize.height>0) {
+                    float gap = (self.cellH-self.rbtSize.height)/2.0f;
+                    
+                    make.top.mas_equalTo(gap);
+                    make.height.mas_equalTo(self.rbtSize.height);
+                    make.bottom.mas_equalTo(-gap);
+                    
+                }else{
+                    make.centerY.mas_equalTo(0);
+                }
+                
                 make.width.mas_equalTo(self.rbtSize.width);
             }];
         }
@@ -176,8 +224,17 @@ static NSString * PicPhoneNumbers      = @"0123456789";
     [self.tf mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.lBT.mas_right).offset(gap*2 + 1);
         
-        make.top.mas_equalTo(0);
-        make.bottom.mas_equalTo(0);
+        if (self.cellH>self.tfH && self.tfH>0) {
+            float gap = (self.cellH-self.tfH)/2.0f;
+            make.top.mas_equalTo(gap);
+            make.height.mas_equalTo(self.tfH);
+            make.bottom.mas_equalTo(-gap);
+            
+        } else {
+            make.top.mas_equalTo(0);
+            make.bottom.mas_equalTo(0);
+        }
+        
         if (isRBT) {
             make.right.mas_equalTo(self.rBT.mas_left).offset(-gap);
         }else{

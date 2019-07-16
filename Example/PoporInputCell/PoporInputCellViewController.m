@@ -90,13 +90,19 @@
     return 30;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 21) {
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row >= 21) {
         return 160;
     }
     return 50;
-    
 }
+
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (indexPath.row == 21) {
+//        return 160;
+//    }
+//    return 50;
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 10;
@@ -111,10 +117,15 @@
         NSString * CellID = [NSString stringWithFormat:@"%li", indexPath.row];
         PoporInputCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];
         BOOL isInit = cell ? NO:YES;
+        int cellH = 70;
+        int tfH = cellH-20;
         switch (indexPath.row) {
             case 0: {
                 if (!cell) {
-                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    //cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40) lGap:16 rGap:16 cellH:cellH tfH:tfH];
+                    
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     
                     [cell.lBT setTitle:@"姓名" forState:UIControlStateNormal];
@@ -135,7 +146,7 @@
             }
             case 1: {
                 if (!cell) {
-                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeLineView  lbtSize:CGSizeMake(-100, 40) rbtSize:CGSizeZero];
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeLineView  lbtSize:CGSizeMake(-100, 40) rbtSize:CGSizeZero lGap:16 rGap:16 cellH:cellH tfH:tfH];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     cell.tf.textAlignment = NSTextAlignmentRight;
                     
@@ -157,7 +168,7 @@
             }
             case 2: {
                 if (!cell) {
-                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(100, 40)];
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(100, 40) lGap:16 rGap:16 cellH:cellH tfH:tfH];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     
                     [cell.lBT setTitle:@"验证码" forState:UIControlStateNormal];
@@ -179,7 +190,7 @@
             }
             case 3: {
                 if (!cell) {
-                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40) lGap:16 rGap:16 cellH:cellH tfH:tfH];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     
                     [cell.lBT setTitle:@"密码" forState:UIControlStateNormal];
@@ -194,7 +205,7 @@
             }
             case 4: {
                 if (!cell) {
-                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40) lGap:16 rGap:16 cellH:cellH tfH:tfH];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     
                     [cell.lBT setTitle:@"禁止输入" forState:UIControlStateNormal];
@@ -212,7 +223,7 @@
             }
             case 5: {
                 if (!cell) {
-                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40) lGap:16 rGap:16 cellH:cellH tfH:tfH];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     cell.textGapUnit = 4;
                     
@@ -234,7 +245,7 @@
             }
             case 6: {
                 if (!cell) {
-                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40) lGap:16 rGap:16 cellH:cellH tfH:tfH];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     cell.textGapUnit = 4;
                     
@@ -256,7 +267,7 @@
             }
             case 7: {
                 if (!cell) {
-                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40)];
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeMake(20, 40) lGap:16 rGap:16 cellH:cellH tfH:tfH];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     
                     [cell.lBT setTitle:@"最多5字节" forState:UIControlStateNormal];
@@ -280,7 +291,7 @@
             }
             case 8: {
                 if (!cell) {
-                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero];
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT + PoporInputCellTypeRBT + PoporInputCellTypeLineView lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero lGap:16 rGap:16 cellH:cellH tfH:tfH];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     cell.textGapUnit = 4;
                     
@@ -302,7 +313,7 @@
             }
             case 9: {
                 if (!cell) {
-                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero];
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero lGap:16 rGap:16 cellH:cellH tfH:tfH];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     cell.tf.textAlignment = NSTextAlignmentRight;
                     
@@ -325,7 +336,7 @@
             }
             case 10: {
                 if (!cell) {
-                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT lbtSize:CGSizeMake(0, 40) rbtSize:CGSizeZero];
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT lbtSize:CGSizeMake(0, 40) rbtSize:CGSizeZero lGap:16 rGap:16 cellH:cellH tfH:tfH];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     cell.tf.textAlignment = NSTextAlignmentRight;
                     
@@ -347,7 +358,7 @@
             }
             case 11: {
                 if (!cell) {
-                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero];
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero lGap:16 rGap:16 cellH:cellH tfH:tfH];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
                     isInit = YES;
                     
@@ -428,10 +439,11 @@
         return cell;
     }else{
         NSString * CellID = [NSString stringWithFormat:@"%li", indexPath.row];
-        PoporTextViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];
-        BOOL isInit = cell ? NO:YES;
+        
+        BOOL isInit = NO ;// = cell ? NO:YES;
         switch (indexPath.row) {
             case 21: {
+                PoporTextViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];
                 if (!cell) {
                     cell = [[PoporTextViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
                     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -450,14 +462,80 @@
                         make.left.mas_equalTo(weakCell.button.mas_left).mas_offset(-6);
                         make.bottom.mas_equalTo(-20);
                         make.right.mas_equalTo(weakCell.button.mas_right).mas_offset(6);
+                        
+                        make.height.mas_greaterThanOrEqualTo(140);
                     }];
                 }
-                [cell.button setTitle:@"备注" forState:UIControlStateNormal];
+                [cell.button setTitle:@"备注21" forState:UIControlStateNormal];
                 [cell.button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
                 
                 cell.textView.placeholder = @"2019年6月26日讯，华为轮值董事长胡厚崑今日在上海2019MWC会上说，截至目前，华为已在全球发货15万个5G基站，年底达到50万个5G基站。华为50个全球5G合同中，有28个来自欧洲。近期华为 Mate X 5G手机会正式上市。";
                 
-                break;
+                return cell;
+            }
+            case 22: {
+                PoporLabelCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+                if (!cell) {
+                    cell = [[PoporLabelCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    
+                    __weak typeof(cell) weakCell = cell;
+                    [cell setMasBlockButton:^(MASConstraintMaker *make) {
+                        make.top.mas_equalTo(10);
+                        make.left.mas_equalTo(16);
+                        //make.bottom.mas_equalTo(-20);
+                        make.right.mas_equalTo(-16);
+                        make.height.mas_equalTo(20);
+                        
+                    } masBlockLabel:^(MASConstraintMaker *make) {
+                        
+                        make.top.mas_equalTo(weakCell.button.mas_bottom).mas_offset(0);
+                        make.left.mas_equalTo(weakCell.button);
+                        make.bottom.mas_equalTo(-10);
+                        make.right.mas_equalTo(weakCell.button);
+                        //make.height.mas_greaterThanOrEqualTo(140);
+                    } ];
+                    
+                    cell.label.font = [UIFont systemFontOfSize:16];
+                }
+                [cell.button setTitle:@"备注22" forState:UIControlStateNormal];
+                [cell.button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                
+                cell.label.text = @"2019年6月26日讯，华为轮值董事长胡厚崑今日在上海2019MWC会上说，截至目前，华为已在全球发货15万个5G基站，年底达到50万个5G基站。华为50个全球5G合同中，有28个来自欧洲。近期华为 Mate X 5G手机会正式上市。";
+                
+                return cell;
+            }
+            case 23: {
+                PoporLabelCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+                if (!cell) {
+                    cell = [[PoporLabelCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    
+                    __weak typeof(cell) weakCell = cell;
+                    [cell setMasBlockButton:^(MASConstraintMaker *make) {
+                        make.top.mas_equalTo(10);
+                        make.left.mas_equalTo(16);
+                        //make.bottom.mas_equalTo(-20);
+                        make.width.mas_equalTo(90);
+                        make.height.mas_equalTo(20);
+                        
+                    } masBlockLabel:^(MASConstraintMaker *make) {
+                        
+                        make.top.mas_equalTo(weakCell.button);
+                        make.left.mas_equalTo(weakCell.button.mas_right).mas_offset(5);
+                        make.bottom.mas_equalTo(-10);
+                        make.right.mas_equalTo(-16);
+                        //make.height.mas_greaterThanOrEqualTo(140);
+                    } ];
+                    
+                    cell.label.font = [UIFont systemFontOfSize:16];
+                }
+                [cell.button setTitle:@"备注23" forState:UIControlStateNormal];
+                [cell.button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                
+                cell.label.text = @"2019年6月26日讯，华为轮值董事长胡厚崑今日在上海2019MWC会上说，截至目前，华为已在全球发货15万个5G基站，年底达到50万个5G基站。华为50个全球5G合同中，有28个来自欧洲。近期华为 Mate X 5G手机会正式上市。";
+                
+                return cell;
             }
             default:{
                 UITableViewCell * dcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
@@ -467,11 +545,8 @@
                 break;
             }
         }
-        if (isInit) {
-            
-        }
         
-        return cell;
+        
     }
     
 }

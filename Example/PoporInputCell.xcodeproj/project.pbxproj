@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		11D7353D025C1998CFB89A14 /* Pods_PoporInputCell_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5F39667EC6E7799446BDC5 /* Pods_PoporInputCell_Tests.framework */; };
+		187FB48622DD649A00AB27B7 /* PoporInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187FB48022DD649A00AB27B7 /* PoporInputCell.m */; };
+		187FB48722DD649A00AB27B7 /* PoporTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187FB48322DD649A00AB27B7 /* PoporTextViewCell.m */; };
+		187FB48822DD649A00AB27B7 /* PoporInputCellTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 187FB48522DD649A00AB27B7 /* PoporInputCellTool.m */; };
+		187FB49122DD6C8300AB27B7 /* PoporLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187FB49022DD6C8300AB27B7 /* PoporLabelCell.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -39,6 +43,14 @@
 /* Begin PBXFileReference section */
 		048B09595C3A06C0DC722D48 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		142EE3D245B72551E4C7EB61 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		187FB48022DD649A00AB27B7 /* PoporInputCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporInputCell.m; sourceTree = "<group>"; };
+		187FB48122DD649A00AB27B7 /* PoporTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporTextViewCell.h; sourceTree = "<group>"; };
+		187FB48222DD649A00AB27B7 /* PoporInputCellTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporInputCellTool.h; sourceTree = "<group>"; };
+		187FB48322DD649A00AB27B7 /* PoporTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporTextViewCell.m; sourceTree = "<group>"; };
+		187FB48422DD649A00AB27B7 /* PoporInputCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporInputCell.h; sourceTree = "<group>"; };
+		187FB48522DD649A00AB27B7 /* PoporInputCellTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporInputCellTool.m; sourceTree = "<group>"; };
+		187FB48F22DD6C8300AB27B7 /* PoporLabelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PoporLabelCell.h; sourceTree = "<group>"; };
+		187FB49022DD6C8300AB27B7 /* PoporLabelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PoporLabelCell.m; sourceTree = "<group>"; };
 		289FEE3CB0C1224248891DB5 /* Pods-PoporInputCell_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporInputCell_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PoporInputCell_Tests/Pods-PoporInputCell_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C8852B269C5576F69739B54 /* Pods_PoporInputCell_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporInputCell_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A5F39667EC6E7799446BDC5 /* Pods_PoporInputCell_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporInputCell_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +107,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		187FB47E22DD649A00AB27B7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				187FB47F22DD649A00AB27B7 /* PoporInputCell */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		187FB47F22DD649A00AB27B7 /* PoporInputCell */ = {
+			isa = PBXGroup;
+			children = (
+				187FB48422DD649A00AB27B7 /* PoporInputCell.h */,
+				187FB48022DD649A00AB27B7 /* PoporInputCell.m */,
+				187FB48F22DD6C8300AB27B7 /* PoporLabelCell.h */,
+				187FB49022DD6C8300AB27B7 /* PoporLabelCell.m */,
+				187FB48122DD649A00AB27B7 /* PoporTextViewCell.h */,
+				187FB48322DD649A00AB27B7 /* PoporTextViewCell.m */,
+				187FB48222DD649A00AB27B7 /* PoporInputCellTool.h */,
+				187FB48522DD649A00AB27B7 /* PoporInputCellTool.m */,
+			);
+			path = PoporInputCell;
+			sourceTree = "<group>";
+		};
 		18B6E5E021DDF3660081AB5E /* other */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +164,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				187FB47E22DD649A00AB27B7 /* Classes */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for PoporInputCell */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -389,9 +425,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187FB48722DD649A00AB27B7 /* PoporTextViewCell.m in Sources */,
 				6003F59E195388D20070C39A /* PoporInputCellAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* PoporInputCellViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				187FB49122DD6C8300AB27B7 /* PoporLabelCell.m in Sources */,
+				187FB48622DD649A00AB27B7 /* PoporInputCell.m in Sources */,
+				187FB48822DD649A00AB27B7 /* PoporInputCellTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "PoporInputCellTool.h"
+#import "PoporLabelCell.h"
 #import "PoporTextViewCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -19,6 +20,7 @@ typedef NS_OPTIONS(NSUInteger, PoporInputCellType) {
     PoporInputCellTypeLBT      = 1 << 0,
     PoporInputCellTypeLineView = 1 << 1,
     PoporInputCellTypeRBT      = 1 << 2,
+    PoporInputCellTypeTextView = 1 << 3, // TextView 与 textFiled, textView暂且不支持PoporInputTfType.
 };
 
 typedef NS_ENUM(int, PoporInputTfType) {
@@ -63,6 +65,8 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
 
 @property (nonatomic        ) int         lGap; // 最左边元素到cell边界
 @property (nonatomic        ) int         rGap; // 最右边元素到cell边界
+@property (nonatomic        ) int         cellH;
+@property (nonatomic        ) int         tfH;
 
 @property (nonatomic        ) int         textGapUnit; //钱数字间隔,一般为3|4
 
@@ -101,6 +105,18 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
  *  @return id
  */
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize lGap:(int)lGap rGap:(int)rGap;
+
+
+/**
+ *  设置个人信息
+ *
+ *  @param lGap 推荐使用 [PoporInputCellTool share].separatorInsetX
+ *  @param rGap 习惯上lGap = rGap
+ *  @param cellH 适用于 tableView: estimatedHeightForRowAtIndexPath:
+ *  @param cellH 适用于 tableView: estimatedHeightForRowAtIndexPath:, 如果<=0 则等于cellH
+ *  @return id
+ */
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellType:(PoporInputCellType)cellType lbtSize:(CGSize)lbtSize rbtSize:(CGSize)rbtSize lGap:(int)lGap rGap:(int)rGap cellH:(int)cellH tfH:(int)tfH;
 
 - (void)setDefaultFetchCodeBT;
 - (void)startTimerFrom:(int)max progress:(PoporInputCellIntBlock)progressBlock finish:(PoporInputCellBlock)finishBlock;

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PoporInputCell'
-  s.version          = '0.0.15'
+  s.version          = '0.0.16'
   s.summary          = '简化UITableViewCell 设定输入框，按钮等部件。包含大陆号码、钱、银行卡数字格式化。验证码倒计时等。'
 
   s.homepage         = 'https://github.com/popor/PoporInputCell'
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.frameworks = 'UIKit', 'Foundation'
 
-  s.source_files = 'PoporInputCell/Classes/*.{h,m}'
+  s.source_files = 'Example/Classes/PoporInputCell/*.{h,m}'
   
   s.dependency 'Masonry'
   s.dependency 'PoporFoundation/NSString'

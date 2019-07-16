@@ -7,114 +7,116 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0552F2D99662F6935D2FFB1178435510 /* UIViewController+TapEndEdit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8187D4B8F68A967518D61BD1D603CEFB /* UIViewController+TapEndEdit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		011ADD7EDFA515C892EBF5535B89EF63 /* PoporLabelCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 76B359DD197339893FCEEC533211158B /* PoporLabelCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05A040F35BF1C88F869404E1A940B493 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 033887BC0A99C3942C76E286ACA0B6C7 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05EA1447EEA0EB669F8DEE73964A7C60 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 16FF56879B94584050E976112D86118D /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		060DBF413A2B75C616CD5C659A1F31C9 /* UIViewController+AC.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B793174A3E0A58C9B6BDF6F9EC948C0 /* UIViewController+AC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		090386069413003EA4BB8358964C49AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FC988D5CD8616BE0A0A5F16C35BA7C /* Foundation.framework */; };
 		0967598607D521318F69D7D39D517B20 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B03C1D6B59BF9FCE1D27568AEB68794 /* ViewController+MASAdditions.m */; };
 		098630ECDB64ED7B89F5F687C82B4AC3 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C20107792A79BF3FA90F211FB002E2 /* NSArray+MASAdditions.m */; };
+		0A72A02376F6CC071B5089C241227BF9 /* PoporUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B2E84BCE5B98555B14436B921F2CF0 /* PoporUI-dummy.m */; };
 		0AF1AD35706D90B1A91F291B899EF8C0 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 85DCB476CD2A86DDEF23FD2307856CA1 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E37977E85B944FE1B83587B475C5423 /* UITextField+MaxLength.h in Headers */ = {isa = PBXBuildFile; fileRef = 18DB332ACC1BDE5A048FC1C678F1FB24 /* UITextField+MaxLength.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		109871F5299255972426E3F5C62814EC /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B1D8A7227877913D6C1F3AE34AAC6C /* NSString+MD5.m */; };
-		12A087558BC4CADAFC454F1C1CA79A21 /* PoporUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B2E84BCE5B98555B14436B921F2CF0 /* PoporUI-dummy.m */; };
+		110B02A32D4427D2963FCBA8E6D7F69D /* PoporTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E18FC8661A0F169CB33F47E0994BC800 /* PoporTextViewCell.m */; };
 		12D2754A57E6F28A432C55AA9B815904 /* NSObject+assign.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2AB6AE14FC0BB4E09758D42511482D /* NSObject+assign.m */; };
 		1384744AAFBB5AAE3A76C4B9DCB96FFF /* NSString+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = 70DB5B4B3FF072D7B6F51486A978C908 /* NSString+Size.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1777F7936BBFB7601F9D8935E52EF2DD /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F69F3E92B122A84C95D618208E48EE /* Masonry.framework */; };
+		18D3DBFA82DFA5AA39E08F3A58A2307B /* UITextField+textRange.h in Headers */ = {isa = PBXBuildFile; fileRef = BBA4D9DCFF687BBA5BC12F8EF5619312 /* UITextField+textRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1972E85F0FCD0F3EAF28ED7CD036286E /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F994C8224C62E9349A270433805868D /* Masonry-dummy.m */; };
-		1FAC6D6EC828A7D053F6CA888A6489E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FC988D5CD8616BE0A0A5F16C35BA7C /* Foundation.framework */; };
-		20ABFF47006FD58052BC182F73ACD09C /* UIPlaceHolderTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 328BE88AE6A2C394C2065D4D309CA5CD /* UIPlaceHolderTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23D48B4A5948BBEBBA559D35B5EF9596 /* UITextField+textRange.h in Headers */ = {isa = PBXBuildFile; fileRef = BBA4D9DCFF687BBA5BC12F8EF5619312 /* UITextField+textRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FCF106FE6D6B7FDE83573AB79386583 /* UIViewController+ncBar.h in Headers */ = {isa = PBXBuildFile; fileRef = D0162B2B4B35B781A6ACF10B6EAACACB /* UIViewController+ncBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2042993E04A569B380FBD93FE15EBBF7 /* UITextField+format.h in Headers */ = {isa = PBXBuildFile; fileRef = A772651EE358FDD6EF3F68ECFE9FB7A2 /* UITextField+format.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		256A4AEBAF3F663C2853E96BDE7135C2 /* NSString+Tool.h in Headers */ = {isa = PBXBuildFile; fileRef = 8896C0C50D08D2152A41B9B886FC2940 /* NSString+Tool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		280D36330BAC5715615FF4A8B42D60D6 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B63EEC1259F0C1631C609992A35C28C4 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		297A3627CF2F032CBFDC61D1A3786E63 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = DF77868DE6D79B970CA6DD4122B2FE15 /* MASViewAttribute.m */; };
-		2B5B4EED71BD69816F8F92D85DB3B694 /* UIInsetsTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F10131ED7090EE9D2B8AB99B39441A4 /* UIInsetsTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B6E7DF9B8B24C6C62A06E2BAB3238E2 /* PoporInputCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AEC34054526593007051F8FB70464EE9 /* PoporInputCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C6ECB883EC66E331D90D2D567236C12 /* Pods-PoporInputCell_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28650F16D60D02664B3333E221297A09 /* Pods-PoporInputCell_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C7B0C999DC0F009FFE315BC18E531AD /* NSObject+performSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E451EC26F7FFF6A4DF5E27BA2FB867 /* NSObject+performSelector.m */; };
+		2D102B2815804870D6A323DD7D08DDA3 /* UITextField+format.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699EB92E7006C8CA7BC605412ABE987 /* UITextField+format.m */; };
 		2DDC717F3FCF84DDAD0FA152F99320B6 /* NSString+email.h in Headers */ = {isa = PBXBuildFile; fileRef = FE5B99AE04A2165CEBF9FDA01F8D1D3A /* NSString+email.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E1F21037E3295D8087654897BD20D8C /* UITextField+MaxLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F77E517C196BB505724D4FD0D51CB17 /* UITextField+MaxLength.m */; };
 		2F9B155FDB60EA9E5590D48B13607025 /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A14C46248D34BD8E07EC094B25F1B6 /* NSObject+Swizzling.m */; };
-		3317E5C35490563413B9BC1DF7BC5B63 /* UIPasteImageTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = AF877B0B8D4B7FF4C9AADD1F105B2559 /* UIPasteImageTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33C762A18D14CCCFC37995A3505B3B31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FC988D5CD8616BE0A0A5F16C35BA7C /* Foundation.framework */; };
 		346080C0D1CA23399ADD739D722D7CEF /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FA294D8EC1AEC40631114B5B24B7110 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BFA1E9FA2CECA9E55847B025D849266 /* PoporTextViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DFF466013A8548F04AE6ADA858F9BEFB /* PoporTextViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DA5F1D8E51CDD102A871C2F37770C7B /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = D665D7F027FDD6B2A68636A221DE7913 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3EFB7B85A785A5483D8301F4B0638FB7 /* UIViewController+TapEndEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D8651527C231C76EC4AE8A20AC2F38 /* UIViewController+TapEndEdit.m */; };
-		419D65A88D8A74AA9C1828C1B2E9F9C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC79CEAB4BE83E5302C1428FC9F3391 /* UIKit.framework */; };
-		41A669BE6C929DF88FDF9A3F59EEA203 /* UITextView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8D5FC4F73F63C6F4F36A4567A4F3BC /* UITextView+Size.m */; };
 		434E0E3E9A68448B1BD0142BBCB38CC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC79CEAB4BE83E5302C1428FC9F3391 /* UIKit.framework */; };
-		4971D271D10E0ED896ABCE2799376910 /* UITextField+textRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB3E92BEB92334C67D6E976913D00F9 /* UITextField+textRange.m */; };
+		46EB4B27059FADE53D10405213E562EA /* UITextView+MaxLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC11F028FEB5338866E64299C045C7 /* UITextView+MaxLength.m */; };
+		47DBA0D159DD6729CC6E176A04970E34 /* UITextView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8D5FC4F73F63C6F4F36A4567A4F3BC /* UITextView+Size.m */; };
+		48608B29BA3C0BC12199DEAA3C663747 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6254B59028F759083467A114B0B006 /* UIPlaceHolderTextView.m */; };
 		4B0981F9AC628CF5100C50FF4A163A4A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A9416944CC518D94E7052E3DB9C37A8C /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C8791E3068F5465F87EF08ABA9F9C09 /* UITextView+MaxLength.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D8C4304F64158500D74C7B71F0E6A /* UITextView+MaxLength.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E2319575FDEFE8A7082B372BC12892B /* PrefixFun.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E093C4C2145C566E4D50032242D213C /* PrefixFun.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52BCCE8C7C031259AB542A92CB2A621E /* UITextView+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = AC025268B3B9B28577C5239499802A94 /* UITextView+Size.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5412DB7E239134AFC939EBE82ECF7457 /* PoporInputCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AA707B2440611141075B4135B083 /* PoporInputCell-dummy.m */; };
+		54565C9FF585DF160230535C06B7657C /* PoporInputCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B28AFA55F803C71786970F077F7A1 /* PoporInputCell-dummy.m */; };
+		569261D807F53FEFCACACBBA73E5B8E9 /* UITextView+MaxLength.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D8C4304F64158500D74C7B71F0E6A /* UITextView+MaxLength.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56F097A394BDEA54F862DC0EB6AD93CB /* NSString+email.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5AD5C69A1995FC796FE606D36C3F2F /* NSString+email.m */; };
 		59094DBBE93A86B2A76204F50E99C2D6 /* PrefixOs.h in Headers */ = {isa = PBXBuildFile; fileRef = 7696C52BA14807C11AE60FBE4B9D5D44 /* PrefixOs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5924BBB6CB305BFAC1A8A0267F9614BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FC988D5CD8616BE0A0A5F16C35BA7C /* Foundation.framework */; };
-		5CC65832BFD186FE79C798AE692D8375 /* PoporUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D170E10BB516ED88CBF0A93E9FD6EC /* PoporUI.framework */; };
-		5F4A00BCE1186CB6751064C7EA206E4B /* PoporFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D5709CD65D9A3762D01F9780B69FCF /* PoporFoundation.framework */; };
+		592A731A875E5C1F4D04A1F05EFC66D8 /* UITextView+Size.h in Headers */ = {isa = PBXBuildFile; fileRef = AC025268B3B9B28577C5239499802A94 /* UITextView+Size.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6375AA6579E8320AED24778AEF55595A /* NSObject+Swizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = EB65BA16ED2E0BDF07180625AA7E4565 /* NSObject+Swizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		64BB9E1AC57CF5841174F960A558AD52 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6254B59028F759083467A114B0B006 /* UIPlaceHolderTextView.m */; };
 		64EC72EB7ABA6E383936A6ADCBB4CC18 /* NSString+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9008438B15EE76C22FFE13BE7578BAC8 /* NSString+Tool.m */; };
 		6A6AD3A5BBDBFD0B4AF936BD518EC0B1 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7085FF62E19102FE35454F4E041E165E /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C4F1C23F9E7A71169164D1B5CD234F7 /* UITextField+format.h in Headers */ = {isa = PBXBuildFile; fileRef = A772651EE358FDD6EF3F68ECFE9FB7A2 /* UITextField+format.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C7A25EFE080F64E2A2226E66C70FCA1 /* UIPlaceHolderTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 328BE88AE6A2C394C2065D4D309CA5CD /* UIPlaceHolderTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7167D368185C41CE4F7F5497E1CE83BC /* UIViewController+AC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA168D77CD05DD5D4675B894D3F40A2 /* UIViewController+AC.m */; };
 		78B2727EE5D693F58D019DB098005101 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F8A7B67788D1A0CD38D74B72DF8FD2 /* MASConstraintMaker.m */; };
+		7A875D30B9F5E2C0A9342A8C2D37253D /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F69F3E92B122A84C95D618208E48EE /* Masonry.framework */; };
 		7B126EF78ACBA496466BD2FCE6C3C2CB /* Pods-PoporInputCell_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE53CD345316B537A31CFD586AB421BD /* Pods-PoporInputCell_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BFF65958F014760B6AC4742824892EB /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 549F6B2ADF872D670618317239FC309E /* MASCompositeConstraint.m */; };
-		812367E7979609E54E877724F9D3A6DC /* UIViewController+LeeBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 61328201325CB1485F8E60614DEF73A7 /* UIViewController+LeeBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F28AEA394246C88B7914600BD6F2377 /* PoporLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A60FE2627693E743CB461864C7D6F2C /* PoporLabelCell.m */; };
+		7F759F361E3B3609976D1E8652C7DAB8 /* UIPasteImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E16639B8D5CE7B85C23B2652DE198 /* UIPasteImageTextView.m */; };
+		803347C6CC2031C4380B712B417E6D07 /* UIViewController+LeeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DB49C5AD0150171F5512A9C97790F597 /* UIViewController+LeeBase.m */; };
 		8539B851E01A58467BE49CA3FA77223C /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8227C0F61C0497B16A82456A1A342B /* MASLayoutConstraint.m */; };
-		89B266462EA29E7EEFC311E1F00488E0 /* UIViewController+LeeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DB49C5AD0150171F5512A9C97790F597 /* UIViewController+LeeBase.m */; };
 		8B92011C9373001132C8148BFC8F50B3 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F7FC19F5E56EC4806AE6C53A8127BBF /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BEE2003D53FC3799D479C20CAA533E9 /* PoporUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E2698C849DA5A394BF6F79C970384D6 /* PoporUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D0D4BA7EC16AB40DD2A35B221CA70EF /* NSString+IDCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E75EF0D90984CD91E67CD4270B3936F /* NSString+IDCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D4D1F6E4709EBB13974E95DC1059DDC /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C464549C1E37AEC528146F15B5F6D8 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D65CE579E516BDD5FB36CAA21D693F6 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 025B89CC0222E35A5F73383F672AFEAE /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E44429A7C62E99452571DDE974A6027 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC79CEAB4BE83E5302C1428FC9F3391 /* UIKit.framework */; };
 		8FBC052496FECF20E75A4EB6F198C7A8 /* PrefixColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 810F63A26B1B0E1FA6F39A1C67AE056D /* PrefixColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		919B1E5A3C0B7012BC5AEBB9A0D51CAE /* UIViewController+TapEndEdit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8187D4B8F68A967518D61BD1D603CEFB /* UIViewController+TapEndEdit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93ABF64B061956DD0AF8686AF7CA25EA /* UIViewController+ncBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EC70175302FD262A38986C24B93A42D3 /* UIViewController+ncBar.m */; };
 		941955A19C40899D275604E6E9C21A6D /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 192E66D04DC789394061F5DD1B9C96BA /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97B89FADCCEBF3E8D8EE95942A2BB304 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FC988D5CD8616BE0A0A5F16C35BA7C /* Foundation.framework */; };
+		9BC363E408E71B432EB4F996BB3BC7B3 /* UIInsetsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B880308839CCC2042057DAEF42A4 /* UIInsetsTextField.m */; };
+		9BFFE537EF20396FF0BABB225D7CE485 /* PoporUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D170E10BB516ED88CBF0A93E9FD6EC /* PoporUI.framework */; };
+		9C262ED8C2FD27E4736F4829AE607F05 /* UITextField+MaxLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F77E517C196BB505724D4FD0D51CB17 /* UITextField+MaxLength.m */; };
 		9D546E1168C04B0B2EAE005D9275D18B /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AAA55E6AB2A3352C86B4920F873EAF4 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A048BAA02A92AD225364D2930950DCDB /* PrefixBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = F67BD8265826607DA22E74A87534D3D0 /* PrefixBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A11E35D7D104F76276F3DF89035514CA /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C10DBA59E45DA9A85C99A8A2DB2B761 /* NSString+Size.m */; };
-		A13E34D00C56701617BA9633BF7CC946 /* PoporTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC007BC3711FC42770355E30581869 /* PoporTextViewCell.m */; };
-		A2C07277B5B917CEB765CD0A72FEE5D3 /* UIViewController+AC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA168D77CD05DD5D4675B894D3F40A2 /* UIViewController+AC.m */; };
+		A2E0B14817F6BC836CA06628DE86913E /* UIViewController+LeeBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 61328201325CB1485F8E60614DEF73A7 /* UIViewController+LeeBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A35FBEEC7D088AEC05297E8292A32C77 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C05BFD5C30769179F236197F3B2737 /* View+MASAdditions.m */; };
-		A47736C2A00AA27CD0D4F5B02F765572 /* PoporInputCellTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 8599FE6D2CDC7CCBFE89AF743E091F2A /* PoporInputCellTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4DB38256BF47BEEFF43050E9B1E05F5 /* NSString+IDCard.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6649EBC4E23CFD1C58C81F4C924566 /* NSString+IDCard.m */; };
 		A5DCFB2BE9638C45108DB554B56183EF /* PrefixFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 28D24B93ACD706CFEB6FC91163E8F018 /* PrefixFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A65CBB2FCE4A0E19555168AF78959350 /* UIViewController+ncBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EC70175302FD262A38986C24B93A42D3 /* UIViewController+ncBar.m */; };
-		A824E754E3FEF6CB23305E0184D1A994 /* PoporInputCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B32BF7A4653DD06CE1D193FB14C04E5 /* PoporInputCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8521559C2F437317E57A55F0A4F83A0 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 439850EE0087130BD97E311C23BEEB0B /* NSString+MD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA1412142B55E4325AC9ABADF715B6FC /* UIViewController+ncBar.h in Headers */ = {isa = PBXBuildFile; fileRef = D0162B2B4B35B781A6ACF10B6EAACACB /* UIViewController+ncBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF5EBC1495297DE8C604BA5823F2314 /* PoporInputCellTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 032177ECCC4DA58C50A78264DE5B71BB /* PoporInputCellTool.m */; };
 		AF4C374A8309AA1E7F91AC9BA62A356A /* NSObject+performSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = 8843E96F4AEDDAF32768C114B24FE5F2 /* NSObject+performSelector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFB31D1FF815D33E7C650A956EDEE63A /* PrefixSize.h in Headers */ = {isa = PBXBuildFile; fileRef = F75D8F6FC262432F13A68F7B14BE1407 /* PrefixSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1E35D265E53F9CBBE8CD9301CA0E485 /* PoporFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D5709CD65D9A3762D01F9780B69FCF /* PoporFoundation.framework */; };
 		B2CBAE59B3EBD9104A6FE7506146DA7B /* PoporFoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E16364BE91F450514162252B8D8AE /* PoporFoundation-dummy.m */; };
-		B6DCED218AA7C0202B3B044C892DBE7C /* PoporInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB293BD655C1DAB6D8801BA7CD9C822 /* PoporInputCell.m */; };
+		B4347FA383A4759BB8A857B7C8EF3C61 /* PoporInputCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68395E1A510E3291AF2C635F9ACF003E /* PoporInputCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7D645EC004610E8A581E532D28771EC /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 353E7AE8D922EC5739E667862EB4CA29 /* MASViewConstraint.m */; };
-		BBDBAFCD31614942C6884408F00894E9 /* PoporInputCellTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E18470F5D1238AE9285B2F750076B3A /* PoporInputCellTool.m */; };
+		BB3D53A2140675DF950DF57E627520BF /* PoporInputCellTool.h in Headers */ = {isa = PBXBuildFile; fileRef = BE7FAE7D05E7EBA4A1BEDF2EEB2BDBCC /* PoporInputCellTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC2A37D640B344C27FD6E237B3623977 /* UIPasteImageTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = AF877B0B8D4B7FF4C9AADD1F105B2559 /* UIPasteImageTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC8A508876A9DB7FCAC4968CC899626C /* PoporInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB52618EC538352637D2B6772792E4A1 /* PoporInputCell.m */; };
+		BC8B0A9EAF51D27DECC750197D627C2F /* PoporFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D5709CD65D9A3762D01F9780B69FCF /* PoporFoundation.framework */; };
+		BCED13D9F9D93061F0A36AA0783FB9A6 /* UIInsetsTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F10131ED7090EE9D2B8AB99B39441A4 /* UIInsetsTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE10D5E89DB803F738ADD5C892A31AE9 /* Pods-PoporInputCell_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE37D29503A466C75C3FC1AA971D88D2 /* Pods-PoporInputCell_Tests-dummy.m */; };
 		C0861ADB4C5FA30F4F9E051F7638A264 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1051CFB808EA5C4EA8E5C190FE1A11DD /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		C12B443DE520746ECF636B6A660B2A73 /* Pods-PoporInputCell_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4D291B741698D7D88AFFBFF31EF1D4 /* Pods-PoporInputCell_Example-dummy.m */; };
-		C31C280FD2C509E3E406977A434D0FF8 /* UIPasteImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2E16639B8D5CE7B85C23B2652DE198 /* UIPasteImageTextView.m */; };
-		C52A5BFC88882F3A2E491A3D1F4AC6E1 /* UIViewController+AC.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B793174A3E0A58C9B6BDF6F9EC948C0 /* UIViewController+AC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE40FB4226E959A2675786E79C533539 /* UITextField+format.m in Sources */ = {isa = PBXBuildFile; fileRef = 0699EB92E7006C8CA7BC605412ABE987 /* UITextField+format.m */; };
+		C9DABB18D4391C28B863EA2767D60638 /* UIViewController+TapEndEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D8651527C231C76EC4AE8A20AC2F38 /* UIViewController+TapEndEdit.m */; };
 		CE93C54413259B4AC3683B6EB874D466 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC79CEAB4BE83E5302C1428FC9F3391 /* UIKit.framework */; };
-		D091D99D6914A6599EC8A081E59C3D67 /* PoporTextViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AFE678D242746F5260A1201B24E2B01A /* PoporTextViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D60D38FB2722C0E16494595BA47F0AA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FC988D5CD8616BE0A0A5F16C35BA7C /* Foundation.framework */; };
+		DD45CFBA2E5DC8241F53F93818806E21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FC988D5CD8616BE0A0A5F16C35BA7C /* Foundation.framework */; };
 		DE23BB5DBBE0B233C7213BD036DB1B69 /* PoporFoundation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B7DB00D820B98558EE4CAC481527A6 /* PoporFoundation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE7D2A090863E3638462E997FFBD25AF /* NSString+format.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E243910B8380032B5A29DD1F7C196BD /* NSString+format.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF3FBAC8ED94EEBD60ADF2F85732FF33 /* PoporUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E2698C849DA5A394BF6F79C970384D6 /* PoporUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E51F496BDC6ACADE04FDA059C6CB2342 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FC988D5CD8616BE0A0A5F16C35BA7C /* Foundation.framework */; };
 		E7CA20228B3583F41927813EE904CAD3 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 764BC1C533EECFCD290CC8C1701ED78D /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8DD5D1D406150E1C80AD015271B6848 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AB08FB3DE0A7B252526D0F54EF9E991F /* MASConstraint.m */; };
-		E9E11E2FB5073C8ED1741C8D293FB496 /* UIInsetsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A02B880308839CCC2042057DAEF42A4 /* UIInsetsTextField.m */; };
 		EAE8B0895956885A752B173683A0D889 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B0C9FBA41FA8120448C132606BD55026 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF30EE03E667AB335E6F765D1AF31BDB /* UITextField+MaxLength.h in Headers */ = {isa = PBXBuildFile; fileRef = 18DB332ACC1BDE5A048FC1C678F1FB24 /* UITextField+MaxLength.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0FC7A9EB2F30599F2BCB4D261E476B4 /* PoporFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D5709CD65D9A3762D01F9780B69FCF /* PoporFoundation.framework */; };
 		F17324286521EDD67D6D755E8C810062 /* NSObject+assign.h in Headers */ = {isa = PBXBuildFile; fileRef = CBB956EE225E90C2613DEFD8C9043B07 /* NSObject+assign.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2B21D30771B1BB333C6C5D32C213B6F /* UITextView+MaxLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC11F028FEB5338866E64299C045C7 /* UITextView+MaxLength.m */; };
+		F77460CBD88DBF1802E685F4B498A502 /* UITextField+textRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB3E92BEB92334C67D6E976913D00F9 /* UITextField+textRange.m */; };
 		FAFBFA90F7BC3E7CF50F8A5CF0A8B264 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 59306DC69589EE9AA791BFE53A94B8B7 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC45E1A54AA55D9DCE1F4E8AEF25290E /* NSString+format.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AEB505DC4972369C037E1393687698 /* NSString+format.m */; };
-		FE1F2F5BE9BB5D9BC62DD9333FC5F6C3 /* PoporInputCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA3DE986BA13D1A7A2920A2F8941A9AF /* PoporInputCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		11AD2DB4062A338325E0E790C2669638 /* PBXContainerItemProxy */ = {
+		033D1C8358544E546E7E4E7136C914D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -128,12 +130,19 @@
 			remoteGlobalIDString = C313C05599252E603366AD274AF8B341;
 			remoteInfo = "Pods-PoporInputCell_Example";
 		};
-		2BDD4736D65928E6200CE61E2F0E2C9F /* PBXContainerItemProxy */ = {
+		2B58564CC28B7585A3CC1FF5370F820E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 97370628A8BC4636041BB29E59F4D696;
 			remoteInfo = PoporFoundation;
+		};
+		2D67F8F65307BE5F44040BBA81117E91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
+			remoteInfo = Masonry;
 		};
 		99D146F73988316427E809F07CE8B9D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -142,21 +151,14 @@
 			remoteGlobalIDString = F2A887230135D2A18006D003F133A41E;
 			remoteInfo = PoporInputCell;
 		};
-		B70D23192DEBDC46D6793FA7E9F61A76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
-			remoteInfo = Masonry;
-		};
-		C78D7476F6DA5DE696264DC0DD02E98B /* PBXContainerItemProxy */ = {
+		A132075B604E5A46C6C6A93A027E9728 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 817833671E949B1C5DDEDB675875A7BE;
 			remoteInfo = PoporUI;
 		};
-		C9FF9CF1CD794B620EFEE9B277B21E1E /* PBXContainerItemProxy */ = {
+		B70D23192DEBDC46D6793FA7E9F61A76 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -180,11 +182,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		009AFB806108E925A91A10172BD968F8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		01B1D8A7227877913D6C1F3AE34AAC6C /* NSString+MD5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MD5.m"; path = "PoporFoundation/Classes/NSString/NSString+MD5.m"; sourceTree = "<group>"; };
 		025B5650003ACF39929280BE797156C5 /* PoporFoundation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PoporFoundation.xcconfig; sourceTree = "<group>"; };
 		025B89CC0222E35A5F73383F672AFEAE /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		032177ECCC4DA58C50A78264DE5B71BB /* PoporInputCellTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporInputCellTool.m; path = Example/Classes/PoporInputCell/PoporInputCellTool.m; sourceTree = "<group>"; };
 		033887BC0A99C3942C76E286ACA0B6C7 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		04343547651B1BD9A3E0E642AE7C8412 /* Pods-PoporInputCell_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PoporInputCell_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0490C30625E9CF7B5291768A93E72528 /* PoporInputCell-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PoporInputCell-Info.plist"; sourceTree = "<group>"; };
 		04B7DB00D820B98558EE4CAC481527A6 /* PoporFoundation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporFoundation-umbrella.h"; sourceTree = "<group>"; };
 		0699EB92E7006C8CA7BC605412ABE987 /* UITextField+format.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+format.m"; path = "PoporUI/Classes/UITextField/UITextField+format.m"; sourceTree = "<group>"; };
 		097D8C4304F64158500D74C7B71F0E6A /* UITextView+MaxLength.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+MaxLength.h"; path = "PoporUI/Classes/UITextView/UITextView+MaxLength.h"; sourceTree = "<group>"; };
@@ -202,10 +207,8 @@
 		1C2E7435C5954C02A8B2B3F646915F1C /* PoporUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PoporUI-Info.plist"; sourceTree = "<group>"; };
 		1CA681DEDF1578C6DE3B0082CD939855 /* Pods-PoporInputCell_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PoporInputCell_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1DE1AAF51AD7D64307EF365A55452E73 /* PoporFoundation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PoporFoundation-Info.plist"; sourceTree = "<group>"; };
-		1E18470F5D1238AE9285B2F750076B3A /* PoporInputCellTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporInputCellTool.m; path = PoporInputCell/Classes/PoporInputCellTool.m; sourceTree = "<group>"; };
 		1E75EF0D90984CD91E67CD4270B3936F /* NSString+IDCard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+IDCard.h"; path = "PoporFoundation/Classes/NSString/NSString+IDCard.h"; sourceTree = "<group>"; };
 		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		23BAA0348A2D91FFB48F6FE8B0AE0C20 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		28650F16D60D02664B3333E221297A09 /* Pods-PoporInputCell_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PoporInputCell_Example-umbrella.h"; sourceTree = "<group>"; };
 		28D24B93ACD706CFEB6FC91163E8F018 /* PrefixFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PrefixFont.h; path = PoporFoundation/Classes/PrefixCore/PrefixFont.h; sourceTree = "<group>"; };
 		295A52D612FD52B03AE4245D40F0F2E3 /* Pods-PoporInputCell_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PoporInputCell_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -215,12 +218,13 @@
 		2F994C8224C62E9349A270433805868D /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		328BE88AE6A2C394C2065D4D309CA5CD /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIPlaceHolderTextView.h; path = PoporUI/Classes/UITextView/UIPlaceHolderTextView.h; sourceTree = "<group>"; };
 		3311CD3932AF95212B900F9CCCCEBC39 /* Pods-PoporInputCell_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PoporInputCell_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		34F7AA707B2440611141075B4135B083 /* PoporInputCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PoporInputCell-dummy.m"; sourceTree = "<group>"; };
 		353E7AE8D922EC5739E667862EB4CA29 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
 		37161E855067DEA1F39E52988527B010 /* Pods-PoporInputCell_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PoporInputCell_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		37E451EC26F7FFF6A4DF5E27BA2FB867 /* NSObject+performSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+performSelector.m"; path = "PoporFoundation/Classes/NSObject/NSObject+performSelector.m"; sourceTree = "<group>"; };
 		3AAA55E6AB2A3352C86B4920F873EAF4 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		3CD18B575357DBD8CFE828127A7C07AA /* PoporInputCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporInputCell-prefix.pch"; sourceTree = "<group>"; };
 		3D3B401BD51F49729D5652424781AD38 /* PoporUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PoporUI.framework; path = PoporUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E031160093053B8120A5E06DB31D2FA /* PoporInputCell.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PoporInputCell.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3F10131ED7090EE9D2B8AB99B39441A4 /* UIInsetsTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIInsetsTextField.h; path = PoporUI/Classes/UITextField/UIInsetsTextField.h; sourceTree = "<group>"; };
 		3F7FC19F5E56EC4806AE6C53A8127BBF /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		3FA294D8EC1AEC40631114B5B24B7110 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
@@ -228,7 +232,7 @@
 		45D170E10BB516ED88CBF0A93E9FD6EC /* PoporUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PoporUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D5709CD65D9A3762D01F9780B69FCF /* PoporFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PoporFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A02B880308839CCC2042057DAEF42A4 /* UIInsetsTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIInsetsTextField.m; path = PoporUI/Classes/UITextField/UIInsetsTextField.m; sourceTree = "<group>"; };
-		4BBC007BC3711FC42770355E30581869 /* PoporTextViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporTextViewCell.m; path = PoporInputCell/Classes/PoporTextViewCell.m; sourceTree = "<group>"; };
+		4A60FE2627693E743CB461864C7D6F2C /* PoporLabelCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporLabelCell.m; path = Example/Classes/PoporInputCell/PoporLabelCell.m; sourceTree = "<group>"; };
 		4CA168D77CD05DD5D4675B894D3F40A2 /* UIViewController+AC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AC.m"; path = "PoporUI/Classes/UIViewController/UIViewController+AC.m"; sourceTree = "<group>"; };
 		4E6254B59028F759083467A114B0B006 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIPlaceHolderTextView.m; path = PoporUI/Classes/UITextView/UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 		4E6E16364BE91F450514162252B8D8AE /* PoporFoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PoporFoundation-dummy.m"; sourceTree = "<group>"; };
@@ -237,37 +241,36 @@
 		549F6B2ADF872D670618317239FC309E /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		59306DC69589EE9AA791BFE53A94B8B7 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
 		59C20107792A79BF3FA90F211FB002E2 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		5AAA867008F6ED7255752F7AC8A13E84 /* PoporInputCell-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PoporInputCell-Info.plist"; sourceTree = "<group>"; };
 		5B03C1D6B59BF9FCE1D27568AEB68794 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		5B793174A3E0A58C9B6BDF6F9EC948C0 /* UIViewController+AC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AC.h"; path = "PoporUI/Classes/UIViewController/UIViewController+AC.h"; sourceTree = "<group>"; };
+		5DEEAB1AA345186B1164394EC30C10D3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		61328201325CB1485F8E60614DEF73A7 /* UIViewController+LeeBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+LeeBase.h"; path = "PoporUI/Classes/UIViewController/UIViewController+LeeBase.h"; sourceTree = "<group>"; };
+		62801213A0B4D93FF0E4BDDC97081F1A /* PoporInputCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PoporInputCell.modulemap; sourceTree = "<group>"; };
 		63C464549C1E37AEC528146F15B5F6D8 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		64A14C46248D34BD8E07EC094B25F1B6 /* NSObject+Swizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Swizzling.m"; path = "PoporFoundation/Classes/NSObject/NSObject+Swizzling.m"; sourceTree = "<group>"; };
+		68395E1A510E3291AF2C635F9ACF003E /* PoporInputCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporInputCell-umbrella.h"; sourceTree = "<group>"; };
 		6C10DBA59E45DA9A85C99A8A2DB2B761 /* NSString+Size.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Size.m"; path = "PoporFoundation/Classes/NSString/NSString+Size.m"; sourceTree = "<group>"; };
-		6F2BFC1D2652D307E472F50711B0FB96 /* PoporInputCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PoporInputCell.xcconfig; sourceTree = "<group>"; };
+		6D7B28AFA55F803C71786970F077F7A1 /* PoporInputCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PoporInputCell-dummy.m"; sourceTree = "<group>"; };
 		7085FF62E19102FE35454F4E041E165E /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
 		70DB5B4B3FF072D7B6F51486A978C908 /* NSString+Size.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Size.h"; path = "PoporFoundation/Classes/NSString/NSString+Size.h"; sourceTree = "<group>"; };
 		764BC1C533EECFCD290CC8C1701ED78D /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		7694F201620136D9FDA647E776AC63C8 /* PoporUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporUI-prefix.pch"; sourceTree = "<group>"; };
 		7696C52BA14807C11AE60FBE4B9D5D44 /* PrefixOs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PrefixOs.h; path = PoporFoundation/Classes/PrefixOs/PrefixOs.h; sourceTree = "<group>"; };
+		76B359DD197339893FCEEC533211158B /* PoporLabelCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporLabelCell.h; path = Example/Classes/PoporInputCell/PoporLabelCell.h; sourceTree = "<group>"; };
 		7B4D291B741698D7D88AFFBFF31EF1D4 /* Pods-PoporInputCell_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PoporInputCell_Example-dummy.m"; sourceTree = "<group>"; };
 		7C90FE9A50A69F7EDB91061B35471998 /* PoporUI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PoporUI.xcconfig; sourceTree = "<group>"; };
 		7E4BE9E63F7B6CD5DE0B212268E59177 /* Pods-PoporInputCell_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PoporInputCell_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7EA44F6DC6EB1554340AEE50E64A2E96 /* Pods-PoporInputCell_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PoporInputCell_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		810F63A26B1B0E1FA6F39A1C67AE056D /* PrefixColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PrefixColor.h; path = PoporFoundation/Classes/PrefixCore/PrefixColor.h; sourceTree = "<group>"; };
-		814D4958F0EDF09A3BAA046857E5ABFF /* PoporInputCell.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PoporInputCell.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8187D4B8F68A967518D61BD1D603CEFB /* UIViewController+TapEndEdit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TapEndEdit.h"; path = "PoporUI/Classes/UIViewController/UIViewController+TapEndEdit.h"; sourceTree = "<group>"; };
-		8599FE6D2CDC7CCBFE89AF743E091F2A /* PoporInputCellTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporInputCellTool.h; path = PoporInputCell/Classes/PoporInputCellTool.h; sourceTree = "<group>"; };
 		85DCB476CD2A86DDEF23FD2307856CA1 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		8843E96F4AEDDAF32768C114B24FE5F2 /* NSObject+performSelector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+performSelector.h"; path = "PoporFoundation/Classes/NSObject/NSObject+performSelector.h"; sourceTree = "<group>"; };
 		8896C0C50D08D2152A41B9B886FC2940 /* NSString+Tool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Tool.h"; path = "PoporFoundation/Classes/NSString/NSString+Tool.h"; sourceTree = "<group>"; };
-		8B32BF7A4653DD06CE1D193FB14C04E5 /* PoporInputCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporInputCell.h; path = PoporInputCell/Classes/PoporInputCell.h; sourceTree = "<group>"; };
 		9008438B15EE76C22FFE13BE7578BAC8 /* NSString+Tool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Tool.m"; path = "PoporFoundation/Classes/NSString/NSString+Tool.m"; sourceTree = "<group>"; };
 		9521C291519EF9D34FD44DA31E7625EB /* Masonry-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masonry-Info.plist"; sourceTree = "<group>"; };
 		98F8A7B67788D1A0CD38D74B72DF8FD2 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		9A5AD5C69A1995FC796FE606D36C3F2F /* NSString+email.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+email.m"; path = "PoporFoundation/Classes/NSString/NSString+email.m"; sourceTree = "<group>"; };
 		9ADCB0BBED0CED09813FC6918B1BA034 /* PoporFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PoporFoundation.modulemap; sourceTree = "<group>"; };
-		9BDD0547963F6B4C495F1FFC25A3CF41 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EB13AB1A73907D9B871643C97521375 /* PoporUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PoporUI.modulemap; sourceTree = "<group>"; };
 		9F77E517C196BB505724D4FD0D51CB17 /* UITextField+MaxLength.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+MaxLength.m"; path = "PoporUI/Classes/UITextField/UITextField+MaxLength.m"; sourceTree = "<group>"; };
@@ -280,20 +283,21 @@
 		AB08FB3DE0A7B252526D0F54EF9E991F /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
 		AC025268B3B9B28577C5239499802A94 /* UITextView+Size.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+Size.h"; path = "PoporUI/Classes/UITextView/UITextView+Size.h"; sourceTree = "<group>"; };
 		AE37D29503A466C75C3FC1AA971D88D2 /* Pods-PoporInputCell_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PoporInputCell_Tests-dummy.m"; sourceTree = "<group>"; };
+		AEC34054526593007051F8FB70464EE9 /* PoporInputCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporInputCell.h; path = Example/Classes/PoporInputCell/PoporInputCell.h; sourceTree = "<group>"; };
 		AF8227C0F61C0497B16A82456A1A342B /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		AF877B0B8D4B7FF4C9AADD1F105B2559 /* UIPasteImageTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIPasteImageTextView.h; path = PoporUI/Classes/UITextView/UIPasteImageTextView.h; sourceTree = "<group>"; };
-		AFE678D242746F5260A1201B24E2B01A /* PoporTextViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporTextViewCell.h; path = PoporInputCell/Classes/PoporTextViewCell.h; sourceTree = "<group>"; };
 		B0C9FBA41FA8120448C132606BD55026 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		B0D8651527C231C76EC4AE8A20AC2F38 /* UIViewController+TapEndEdit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TapEndEdit.m"; path = "PoporUI/Classes/UIViewController/UIViewController+TapEndEdit.m"; sourceTree = "<group>"; };
-		B3E243E109951B80862C7201AD97070F /* PoporInputCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PoporInputCell.modulemap; sourceTree = "<group>"; };
 		B63EEC1259F0C1631C609992A35C28C4 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		B7D2D24172C3BDB1988F2B7B1F919614 /* PoporInputCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PoporInputCell.xcconfig; sourceTree = "<group>"; };
 		B90BD97FE4C9253710F1C1B619AED456 /* Pods-PoporInputCell_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PoporInputCell_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		BA93EF3CD8385A6122FFE29051E57CCA /* PoporInputCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PoporInputCell.framework; path = PoporInputCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA4D9DCFF687BBA5BC12F8EF5619312 /* UITextField+textRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+textRange.h"; path = "PoporUI/Classes/UITextField/UITextField+textRange.h"; sourceTree = "<group>"; };
-		BEB293BD655C1DAB6D8801BA7CD9C822 /* PoporInputCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporInputCell.m; path = PoporInputCell/Classes/PoporInputCell.m; sourceTree = "<group>"; };
+		BE7FAE7D05E7EBA4A1BEDF2EEB2BDBCC /* PoporInputCellTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporInputCellTool.h; path = Example/Classes/PoporInputCell/PoporInputCellTool.h; sourceTree = "<group>"; };
 		C22F7476A5A6E7A937B7DD53BDB38FD6 /* Pods-PoporInputCell_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PoporInputCell_Example-Info.plist"; sourceTree = "<group>"; };
 		C34C5A50B7659F61286154779E603019 /* Pods-PoporInputCell_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PoporInputCell_Example.modulemap"; sourceTree = "<group>"; };
 		C61EE59B32F2C4160E33AE8ABCF22ABC /* Pods-PoporInputCell_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PoporInputCell_Tests-Info.plist"; sourceTree = "<group>"; };
+		CB52618EC538352637D2B6772792E4A1 /* PoporInputCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporInputCell.m; path = Example/Classes/PoporInputCell/PoporInputCell.m; sourceTree = "<group>"; };
 		CBB956EE225E90C2613DEFD8C9043B07 /* NSObject+assign.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+assign.h"; path = "PoporFoundation/Classes/NSObject/NSObject+assign.h"; sourceTree = "<group>"; };
 		CE53CD345316B537A31CFD586AB421BD /* Pods-PoporInputCell_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PoporInputCell_Tests-umbrella.h"; sourceTree = "<group>"; };
 		D0162B2B4B35B781A6ACF10B6EAACACB /* UIViewController+ncBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ncBar.h"; path = "PoporUI/Classes/UIViewController/UIViewController+ncBar.h"; sourceTree = "<group>"; };
@@ -301,13 +305,13 @@
 		D2678539FA707A45961460232EDA3407 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		D2BD5F55044A31F19EFE4BEF5B7CC0F3 /* Pods-PoporInputCell_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PoporInputCell_Tests.modulemap"; sourceTree = "<group>"; };
 		D665D7F027FDD6B2A68636A221DE7913 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
-		DA3DE986BA13D1A7A2920A2F8941A9AF /* PoporInputCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporInputCell-umbrella.h"; sourceTree = "<group>"; };
 		DB49C5AD0150171F5512A9C97790F597 /* UIViewController+LeeBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+LeeBase.m"; path = "PoporUI/Classes/UIViewController/UIViewController+LeeBase.m"; sourceTree = "<group>"; };
 		DC3CA27C70199A0DD6E8BCB6D8E30EED /* PoporFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PoporFoundation.framework; path = PoporFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6649EBC4E23CFD1C58C81F4C924566 /* NSString+IDCard.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+IDCard.m"; path = "PoporFoundation/Classes/NSString/NSString+IDCard.m"; sourceTree = "<group>"; };
 		DF77868DE6D79B970CA6DD4122B2FE15 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		DFF466013A8548F04AE6ADA858F9BEFB /* PoporTextViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporTextViewCell.h; path = Example/Classes/PoporInputCell/PoporTextViewCell.h; sourceTree = "<group>"; };
+		E18FC8661A0F169CB33F47E0994BC800 /* PoporTextViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporTextViewCell.m; path = Example/Classes/PoporInputCell/PoporTextViewCell.m; sourceTree = "<group>"; };
 		E1FC988D5CD8616BE0A0A5F16C35BA7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E474B088BF70DB32716C5AF71F25C2E7 /* PoporInputCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporInputCell-prefix.pch"; sourceTree = "<group>"; };
 		E61F9893C464511542ACC41A58F3B12A /* Pods_PoporInputCell_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PoporInputCell_Example.framework; path = "Pods-PoporInputCell_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB65BA16ED2E0BDF07180625AA7E4565 /* NSObject+Swizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Swizzling.h"; path = "PoporFoundation/Classes/NSObject/NSObject+Swizzling.h"; sourceTree = "<group>"; };
 		EC70175302FD262A38986C24B93A42D3 /* UIViewController+ncBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ncBar.m"; path = "PoporUI/Classes/UIViewController/UIViewController+ncBar.m"; sourceTree = "<group>"; };
@@ -323,6 +327,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				97B89FADCCEBF3E8D8EE95942A2BB304 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25265ED646E1E8E989096C723FEDD4CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD45CFBA2E5DC8241F53F93818806E21 /* Foundation.framework in Frameworks */,
+				7A875D30B9F5E2C0A9342A8C2D37253D /* Masonry.framework in Frameworks */,
+				F0FC7A9EB2F30599F2BCB4D261E476B4 /* PoporFoundation.framework in Frameworks */,
+				9BFFE537EF20396FF0BABB225D7CE485 /* PoporUI.framework in Frameworks */,
+				8E44429A7C62E99452571DDE974A6027 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,18 +359,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1CC4F58056725117C911E4165890618 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1FAC6D6EC828A7D053F6CA888A6489E6 /* Foundation.framework in Frameworks */,
-				1777F7936BBFB7601F9D8935E52EF2DD /* Masonry.framework in Frameworks */,
-				5F4A00BCE1186CB6751064C7EA206E4B /* PoporFoundation.framework in Frameworks */,
-				5CC65832BFD186FE79C798AE692D8375 /* PoporUI.framework in Frameworks */,
-				419D65A88D8A74AA9C1828C1B2E9F9C2 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BCB3A5BCD1AC327037455F4138CE1C96 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,12 +368,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E729548EE057E7CA5CE972F1E9FDD1CA /* Frameworks */ = {
+		EDFBE2C8D7DE14ADAA6B28C1264A3A80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D60D38FB2722C0E16494595BA47F0AA5 /* Foundation.framework in Frameworks */,
-				B1E35D265E53F9CBBE8CD9301CA0E485 /* PoporFoundation.framework in Frameworks */,
+				33C762A18D14CCCFC37995A3505B3B31 /* Foundation.framework in Frameworks */,
+				BC8B0A9EAF51D27DECC750197D627C2F /* PoporFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +393,14 @@
 			path = PoporFoundation;
 			sourceTree = "<group>";
 		};
+		1A15852D70ABD7C0D8F274C25C626367 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3638D95C558DC6413E778FEFD3A18D2 /* PoporInputCell */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		1FE828AAF387359DA0B9F5E83A5A752C /* Pods-PoporInputCell_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +416,20 @@
 			);
 			name = "Pods-PoporInputCell_Example";
 			path = "Target Support Files/Pods-PoporInputCell_Example";
+			sourceTree = "<group>";
+		};
+		2E3CDB167576F6F3947B2F739EE14224 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				62801213A0B4D93FF0E4BDDC97081F1A /* PoporInputCell.modulemap */,
+				B7D2D24172C3BDB1988F2B7B1F919614 /* PoporInputCell.xcconfig */,
+				6D7B28AFA55F803C71786970F077F7A1 /* PoporInputCell-dummy.m */,
+				0490C30625E9CF7B5291768A93E72528 /* PoporInputCell-Info.plist */,
+				3CD18B575357DBD8CFE828127A7C07AA /* PoporInputCell-prefix.pch */,
+				68395E1A510E3291AF2C635F9ACF003E /* PoporInputCell-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PoporInputCell";
 			sourceTree = "<group>";
 		};
 		2F171B77D16786585FD9D0A79635A8FF /* Support Files */ = {
@@ -468,28 +494,14 @@
 			path = "../Target Support Files/Masonry";
 			sourceTree = "<group>";
 		};
-		5CF37B0B0164B616BE35769291B38079 /* Development Pods */ = {
+		5FB69615738D7A955DE2CFBB7B971762 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				5FA2F6F0675AA207870573882957DAE9 /* PoporInputCell */,
+				5DEEAB1AA345186B1164394EC30C10D3 /* LICENSE */,
+				3E031160093053B8120A5E06DB31D2FA /* PoporInputCell.podspec */,
+				009AFB806108E925A91A10172BD968F8 /* README.md */,
 			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		5FA2F6F0675AA207870573882957DAE9 /* PoporInputCell */ = {
-			isa = PBXGroup;
-			children = (
-				8B32BF7A4653DD06CE1D193FB14C04E5 /* PoporInputCell.h */,
-				BEB293BD655C1DAB6D8801BA7CD9C822 /* PoporInputCell.m */,
-				8599FE6D2CDC7CCBFE89AF743E091F2A /* PoporInputCellTool.h */,
-				1E18470F5D1238AE9285B2F750076B3A /* PoporInputCellTool.m */,
-				AFE678D242746F5260A1201B24E2B01A /* PoporTextViewCell.h */,
-				4BBC007BC3711FC42770355E30581869 /* PoporTextViewCell.m */,
-				F845C32151A4068857292AB7A43C7068 /* Pod */,
-				B90AEFF5869B89FD4AC6F4C8F3AC7280 /* Support Files */,
-			);
-			name = PoporInputCell;
-			path = ../..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		70DA9BEAD656E845CE0F3FFDFB28632F /* Targets Support Files */ = {
@@ -627,18 +639,22 @@
 			path = "Target Support Files/Pods-PoporInputCell_Tests";
 			sourceTree = "<group>";
 		};
-		B90AEFF5869B89FD4AC6F4C8F3AC7280 /* Support Files */ = {
+		C3638D95C558DC6413E778FEFD3A18D2 /* PoporInputCell */ = {
 			isa = PBXGroup;
 			children = (
-				B3E243E109951B80862C7201AD97070F /* PoporInputCell.modulemap */,
-				6F2BFC1D2652D307E472F50711B0FB96 /* PoporInputCell.xcconfig */,
-				34F7AA707B2440611141075B4135B083 /* PoporInputCell-dummy.m */,
-				5AAA867008F6ED7255752F7AC8A13E84 /* PoporInputCell-Info.plist */,
-				E474B088BF70DB32716C5AF71F25C2E7 /* PoporInputCell-prefix.pch */,
-				DA3DE986BA13D1A7A2920A2F8941A9AF /* PoporInputCell-umbrella.h */,
+				AEC34054526593007051F8FB70464EE9 /* PoporInputCell.h */,
+				CB52618EC538352637D2B6772792E4A1 /* PoporInputCell.m */,
+				BE7FAE7D05E7EBA4A1BEDF2EEB2BDBCC /* PoporInputCellTool.h */,
+				032177ECCC4DA58C50A78264DE5B71BB /* PoporInputCellTool.m */,
+				76B359DD197339893FCEEC533211158B /* PoporLabelCell.h */,
+				4A60FE2627693E743CB461864C7D6F2C /* PoporLabelCell.m */,
+				DFF466013A8548F04AE6ADA858F9BEFB /* PoporTextViewCell.h */,
+				E18FC8661A0F169CB33F47E0994BC800 /* PoporTextViewCell.m */,
+				5FB69615738D7A955DE2CFBB7B971762 /* Pod */,
+				2E3CDB167576F6F3947B2F739EE14224 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/PoporInputCell";
+			name = PoporInputCell;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		C95722CDC0EE12CCB2DEB6C56E98912A /* NSObject */ = {
@@ -668,7 +684,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				5CF37B0B0164B616BE35769291B38079 /* Development Pods */,
+				1A15852D70ABD7C0D8F274C25C626367 /* Development Pods */,
 				8934E5281161E170398DBD37EA736433 /* Frameworks */,
 				CB8540C2C8E8B5BCACE517EE58EF3ED2 /* Pods */,
 				7879E8FF4F3734980A6612D8134ED3F8 /* Products */,
@@ -709,19 +725,29 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		F845C32151A4068857292AB7A43C7068 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				23BAA0348A2D91FFB48F6FE8B0AE0C20 /* LICENSE */,
-				814D4958F0EDF09A3BAA046857E5ABFF /* PoporInputCell.podspec */,
-				9BDD0547963F6B4C495F1FFC25A3CF41 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		2C4A9858B40657AA19815637944283B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BEE2003D53FC3799D479C20CAA533E9 /* PoporUI-umbrella.h in Headers */,
+				BCED13D9F9D93061F0A36AA0783FB9A6 /* UIInsetsTextField.h in Headers */,
+				BC2A37D640B344C27FD6E237B3623977 /* UIPasteImageTextView.h in Headers */,
+				6C7A25EFE080F64E2A2226E66C70FCA1 /* UIPlaceHolderTextView.h in Headers */,
+				2042993E04A569B380FBD93FE15EBBF7 /* UITextField+format.h in Headers */,
+				EF30EE03E667AB335E6F765D1AF31BDB /* UITextField+MaxLength.h in Headers */,
+				18D3DBFA82DFA5AA39E08F3A58A2307B /* UITextField+textRange.h in Headers */,
+				569261D807F53FEFCACACBBA73E5B8E9 /* UITextView+MaxLength.h in Headers */,
+				592A731A875E5C1F4D04A1F05EFC66D8 /* UITextView+Size.h in Headers */,
+				060DBF413A2B75C616CD5C659A1F31C9 /* UIViewController+AC.h in Headers */,
+				A2E0B14817F6BC836CA06628DE86913E /* UIViewController+LeeBase.h in Headers */,
+				1FCF106FE6D6B7FDE83573AB79386583 /* UIViewController+ncBar.h in Headers */,
+				919B1E5A3C0B7012BC5AEBB9A0D51CAE /* UIViewController+TapEndEdit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6809C2D138FD4535D4078EDB76E36C6D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -750,6 +776,18 @@
 				4B0981F9AC628CF5100C50FF4A163A4A /* View+MASAdditions.h in Headers */,
 				E7CA20228B3583F41927813EE904CAD3 /* View+MASShorthandAdditions.h in Headers */,
 				8B92011C9373001132C8148BFC8F50B3 /* ViewController+MASAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86AAE7A70232FAA5280809681027E0CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4347FA383A4759BB8A857B7C8EF3C61 /* PoporInputCell-umbrella.h in Headers */,
+				2B6E7DF9B8B24C6C62A06E2BAB3238E2 /* PoporInputCell.h in Headers */,
+				BB3D53A2140675DF950DF57E627520BF /* PoporInputCellTool.h in Headers */,
+				011ADD7EDFA515C892EBF5535B89EF63 /* PoporLabelCell.h in Headers */,
+				3BFA1E9FA2CECA9E55847B025D849266 /* PoporTextViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,37 +822,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D343EA3989E0EC73104103F54AD50E3D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE1F2F5BE9BB5D9BC62DD9333FC5F6C3 /* PoporInputCell-umbrella.h in Headers */,
-				A824E754E3FEF6CB23305E0184D1A994 /* PoporInputCell.h in Headers */,
-				A47736C2A00AA27CD0D4F5B02F765572 /* PoporInputCellTool.h in Headers */,
-				D091D99D6914A6599EC8A081E59C3D67 /* PoporTextViewCell.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5356A81124146100307181DF623C3FD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DF3FBAC8ED94EEBD60ADF2F85732FF33 /* PoporUI-umbrella.h in Headers */,
-				2B5B4EED71BD69816F8F92D85DB3B694 /* UIInsetsTextField.h in Headers */,
-				3317E5C35490563413B9BC1DF7BC5B63 /* UIPasteImageTextView.h in Headers */,
-				20ABFF47006FD58052BC182F73ACD09C /* UIPlaceHolderTextView.h in Headers */,
-				6C4F1C23F9E7A71169164D1B5CD234F7 /* UITextField+format.h in Headers */,
-				0E37977E85B944FE1B83587B475C5423 /* UITextField+MaxLength.h in Headers */,
-				23D48B4A5948BBEBBA559D35B5EF9596 /* UITextField+textRange.h in Headers */,
-				4C8791E3068F5465F87EF08ABA9F9C09 /* UITextView+MaxLength.h in Headers */,
-				52BCCE8C7C031259AB542A92CB2A621E /* UITextView+Size.h in Headers */,
-				C52A5BFC88882F3A2E491A3D1F4AC6E1 /* UIViewController+AC.h in Headers */,
-				812367E7979609E54E877724F9D3A6DC /* UIViewController+LeeBase.h in Headers */,
-				AA1412142B55E4325AC9ABADF715B6FC /* UIViewController+ncBar.h in Headers */,
-				0552F2D99662F6935D2FFB1178435510 /* UIViewController+TapEndEdit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -838,17 +845,17 @@
 		};
 		817833671E949B1C5DDEDB675875A7BE /* PoporUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90817634CC5D8FFE054BAB26EEC4BDBA /* Build configuration list for PBXNativeTarget "PoporUI" */;
+			buildConfigurationList = D557C9594C39F44FD4A718D853ADBA51 /* Build configuration list for PBXNativeTarget "PoporUI" */;
 			buildPhases = (
-				F5356A81124146100307181DF623C3FD /* Headers */,
-				0619E923814F0AE9841ACF8158D5B450 /* Sources */,
-				E729548EE057E7CA5CE972F1E9FDD1CA /* Frameworks */,
-				B9E51AF632DED90FE8EF08A5B5D0EECA /* Resources */,
+				2C4A9858B40657AA19815637944283B0 /* Headers */,
+				E1A73ECA5D6F4B9FC0CF07DCDFD81715 /* Sources */,
+				EDFBE2C8D7DE14ADAA6B28C1264A3A80 /* Frameworks */,
+				8241530B6D1FD29AE750DDAA9B1757F4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C7DC959E717F97488FEA35C38094FFF1 /* PBXTargetDependency */,
+				B6EE6ED9F3726A10259887B13AB65818 /* PBXTargetDependency */,
 			);
 			name = PoporUI;
 			productName = PoporUI;
@@ -916,19 +923,19 @@
 		};
 		F2A887230135D2A18006D003F133A41E /* PoporInputCell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 292F32BCC6C2ADF27CA727CD9D62C68A /* Build configuration list for PBXNativeTarget "PoporInputCell" */;
+			buildConfigurationList = 281A2B995883D2E0D8392DACC14053F0 /* Build configuration list for PBXNativeTarget "PoporInputCell" */;
 			buildPhases = (
-				D343EA3989E0EC73104103F54AD50E3D /* Headers */,
-				2839C4590C164F27A42A1BCB064BA89D /* Sources */,
-				A1CC4F58056725117C911E4165890618 /* Frameworks */,
-				DA473A5B95C0EAA30132BC5A185FFE74 /* Resources */,
+				86AAE7A70232FAA5280809681027E0CA /* Headers */,
+				E4BAE560FDF86FE61F88C649BCFF38DD /* Sources */,
+				25265ED646E1E8E989096C723FEDD4CB /* Frameworks */,
+				49D65F1A32AB635A767A0804CE336465 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DCFB5F4B3304EC2A451AE87822E9E202 /* PBXTargetDependency */,
-				1528B396ED3090C61763A125544C2130 /* PBXTargetDependency */,
-				0C3ABC69D9920B168DF3959946F8B74A /* PBXTargetDependency */,
+				46220846F2A51F7BD4A9B9D96D29DEB8 /* PBXTargetDependency */,
+				C559B2BD205BB501A3B916174B752AA2 /* PBXTargetDependency */,
+				3004FDA77BB89D30E1EC583E8FFCED5A /* PBXTargetDependency */,
 			);
 			name = PoporInputCell;
 			productName = PoporInputCell;
@@ -967,7 +974,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		49D65F1A32AB635A767A0804CE336465 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6C381E99F7A3D94FBF63C84710A62757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8241530B6D1FD29AE750DDAA9B1757F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -989,20 +1010,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A6BA08DAB76334FDF02AF4CB357E7819 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9E51AF632DED90FE8EF08A5B5D0EECA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA473A5B95C0EAA30132BC5A185FFE74 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1038,37 +1045,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0619E923814F0AE9841ACF8158D5B450 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				12A087558BC4CADAFC454F1C1CA79A21 /* PoporUI-dummy.m in Sources */,
-				E9E11E2FB5073C8ED1741C8D293FB496 /* UIInsetsTextField.m in Sources */,
-				C31C280FD2C509E3E406977A434D0FF8 /* UIPasteImageTextView.m in Sources */,
-				64BB9E1AC57CF5841174F960A558AD52 /* UIPlaceHolderTextView.m in Sources */,
-				CE40FB4226E959A2675786E79C533539 /* UITextField+format.m in Sources */,
-				2E1F21037E3295D8087654897BD20D8C /* UITextField+MaxLength.m in Sources */,
-				4971D271D10E0ED896ABCE2799376910 /* UITextField+textRange.m in Sources */,
-				F2B21D30771B1BB333C6C5D32C213B6F /* UITextView+MaxLength.m in Sources */,
-				41A669BE6C929DF88FDF9A3F59EEA203 /* UITextView+Size.m in Sources */,
-				A2C07277B5B917CEB765CD0A72FEE5D3 /* UIViewController+AC.m in Sources */,
-				89B266462EA29E7EEFC311E1F00488E0 /* UIViewController+LeeBase.m in Sources */,
-				A65CBB2FCE4A0E19555168AF78959350 /* UIViewController+ncBar.m in Sources */,
-				3EFB7B85A785A5483D8301F4B0638FB7 /* UIViewController+TapEndEdit.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2839C4590C164F27A42A1BCB064BA89D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5412DB7E239134AFC939EBE82ECF7457 /* PoporInputCell-dummy.m in Sources */,
-				B6DCED218AA7C0202B3B044C892DBE7C /* PoporInputCell.m in Sources */,
-				BBDBAFCD31614942C6884408F00894E9 /* PoporInputCellTool.m in Sources */,
-				A13E34D00C56701617BA9633BF7CC946 /* PoporTextViewCell.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7510F481212FE93F9F00C5785ADBC676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1094,20 +1070,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1A73ECA5D6F4B9FC0CF07DCDFD81715 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A72A02376F6CC071B5089C241227BF9 /* PoporUI-dummy.m in Sources */,
+				9BC363E408E71B432EB4F996BB3BC7B3 /* UIInsetsTextField.m in Sources */,
+				7F759F361E3B3609976D1E8652C7DAB8 /* UIPasteImageTextView.m in Sources */,
+				48608B29BA3C0BC12199DEAA3C663747 /* UIPlaceHolderTextView.m in Sources */,
+				2D102B2815804870D6A323DD7D08DDA3 /* UITextField+format.m in Sources */,
+				9C262ED8C2FD27E4736F4829AE607F05 /* UITextField+MaxLength.m in Sources */,
+				F77460CBD88DBF1802E685F4B498A502 /* UITextField+textRange.m in Sources */,
+				46EB4B27059FADE53D10405213E562EA /* UITextView+MaxLength.m in Sources */,
+				47DBA0D159DD6729CC6E176A04970E34 /* UITextView+Size.m in Sources */,
+				7167D368185C41CE4F7F5497E1CE83BC /* UIViewController+AC.m in Sources */,
+				803347C6CC2031C4380B712B417E6D07 /* UIViewController+LeeBase.m in Sources */,
+				93ABF64B061956DD0AF8686AF7CA25EA /* UIViewController+ncBar.m in Sources */,
+				C9DABB18D4391C28B863EA2767D60638 /* UIViewController+TapEndEdit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4BAE560FDF86FE61F88C649BCFF38DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54565C9FF585DF160230535C06B7657C /* PoporInputCell-dummy.m in Sources */,
+				BC8A508876A9DB7FCAC4968CC899626C /* PoporInputCell.m in Sources */,
+				AAF5EBC1495297DE8C604BA5823F2314 /* PoporInputCellTool.m in Sources */,
+				7F28AEA394246C88B7914600BD6F2377 /* PoporLabelCell.m in Sources */,
+				110B02A32D4427D2963FCBA8E6D7F69D /* PoporTextViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0C3ABC69D9920B168DF3959946F8B74A /* PBXTargetDependency */ = {
+		3004FDA77BB89D30E1EC583E8FFCED5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PoporUI;
 			target = 817833671E949B1C5DDEDB675875A7BE /* PoporUI */;
-			targetProxy = C78D7476F6DA5DE696264DC0DD02E98B /* PBXContainerItemProxy */;
+			targetProxy = A132075B604E5A46C6C6A93A027E9728 /* PBXContainerItemProxy */;
 		};
-		1528B396ED3090C61763A125544C2130 /* PBXTargetDependency */ = {
+		46220846F2A51F7BD4A9B9D96D29DEB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = PoporFoundation;
-			target = 97370628A8BC4636041BB29E59F4D696 /* PoporFoundation */;
-			targetProxy = 2BDD4736D65928E6200CE61E2F0E2C9F /* PBXContainerItemProxy */;
+			name = Masonry;
+			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
+			targetProxy = 2D67F8F65307BE5F44040BBA81117E91 /* PBXContainerItemProxy */;
 		};
 		5617C61DDA33515545DBE8F6CDF82B81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1127,23 +1135,23 @@
 			target = C313C05599252E603366AD274AF8B341 /* Pods-PoporInputCell_Example */;
 			targetProxy = 134A53EC57D20157AEDAAA077330FC84 /* PBXContainerItemProxy */;
 		};
+		B6EE6ED9F3726A10259887B13AB65818 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PoporFoundation;
+			target = 97370628A8BC4636041BB29E59F4D696 /* PoporFoundation */;
+			targetProxy = 2B58564CC28B7585A3CC1FF5370F820E /* PBXContainerItemProxy */;
+		};
 		BDFFCCD07E61A777059211BAAC2B082A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
 			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
 			targetProxy = B70D23192DEBDC46D6793FA7E9F61A76 /* PBXContainerItemProxy */;
 		};
-		C7DC959E717F97488FEA35C38094FFF1 /* PBXTargetDependency */ = {
+		C559B2BD205BB501A3B916174B752AA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PoporFoundation;
 			target = 97370628A8BC4636041BB29E59F4D696 /* PoporFoundation */;
-			targetProxy = 11AD2DB4062A338325E0E790C2669638 /* PBXContainerItemProxy */;
-		};
-		DCFB5F4B3304EC2A451AE87822E9E202 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Masonry;
-			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
-			targetProxy = C9FF9CF1CD794B620EFEE9B277B21E1E /* PBXContainerItemProxy */;
+			targetProxy = 033D1C8358544E546E7E4E7136C914D3 /* PBXContainerItemProxy */;
 		};
 		FDD350AD1DA2ECB236833BF4A76819AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1154,37 +1162,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0D86E744CE18CBB8BA50D8CF9FD3F17C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F2BFC1D2652D307E472F50711B0FB96 /* PoporInputCell.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PoporInputCell/PoporInputCell-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PoporInputCell/PoporInputCell-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PoporInputCell/PoporInputCell.modulemap";
-				PRODUCT_MODULE_NAME = PoporInputCell;
-				PRODUCT_NAME = PoporInputCell;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		12A9C0ED5521A2CBB04DB181472DEA0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CA681DEDF1578C6DE3B0082CD939855 /* Pods-PoporInputCell_Example.debug.xcconfig */;
@@ -1307,37 +1284,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		6247287300AB5D9D9634DC10FBB0BF74 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C90FE9A50A69F7EDB91061B35471998 /* PoporUI.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PoporUI/PoporUI-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PoporUI/PoporUI-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PoporUI/PoporUI.modulemap";
-				PRODUCT_MODULE_NAME = PoporUI;
-				PRODUCT_NAME = PoporUI;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		6788586B10F5623730D7D60125E8B535 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1501,66 +1447,6 @@
 			};
 			name = Release;
 		};
-		8C841ACD78384958537E9B757E60C57A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F2BFC1D2652D307E472F50711B0FB96 /* PoporInputCell.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PoporInputCell/PoporInputCell-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PoporInputCell/PoporInputCell-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PoporInputCell/PoporInputCell.modulemap";
-				PRODUCT_MODULE_NAME = PoporInputCell;
-				PRODUCT_NAME = PoporInputCell;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AC2C0D3B507FBD5A5DB660563CB9D69A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C90FE9A50A69F7EDB91061B35471998 /* PoporUI.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PoporUI/PoporUI-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PoporUI/PoporUI-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PoporUI/PoporUI.modulemap";
-				PRODUCT_MODULE_NAME = PoporUI;
-				PRODUCT_NAME = PoporUI;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		B073834A854DB6060D2B832FA6A93A33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0A3FAB36DACE2ACB2895D7D47F36E02 /* Masonry.xcconfig */;
@@ -1592,6 +1478,67 @@
 			};
 			name = Release;
 		};
+		B1A201326376406CDF8017AB5D65A9ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C90FE9A50A69F7EDB91061B35471998 /* PoporUI.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PoporUI/PoporUI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PoporUI/PoporUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PoporUI/PoporUI.modulemap";
+				PRODUCT_MODULE_NAME = PoporUI;
+				PRODUCT_NAME = PoporUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BCEDEF241246771CD7EB04C4E1907C6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7D2D24172C3BDB1988F2B7B1F919614 /* PoporInputCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PoporInputCell/PoporInputCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PoporInputCell/PoporInputCell-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PoporInputCell/PoporInputCell.modulemap";
+				PRODUCT_MODULE_NAME = PoporInputCell;
+				PRODUCT_NAME = PoporInputCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		D0DA836A2D4AD757379B59850A1B7C92 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3311CD3932AF95212B900F9CCCCEBC39 /* Pods-PoporInputCell_Tests.release.xcconfig */;
@@ -1619,6 +1566,67 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D2D13F212834B7088EA8CF5ED0189E53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C90FE9A50A69F7EDB91061B35471998 /* PoporUI.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PoporUI/PoporUI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PoporUI/PoporUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PoporUI/PoporUI.modulemap";
+				PRODUCT_MODULE_NAME = PoporUI;
+				PRODUCT_NAME = PoporUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D6ACFDB74103FC375151C43B4FD16A41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7D2D24172C3BDB1988F2B7B1F919614 /* PoporInputCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PoporInputCell/PoporInputCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PoporInputCell/PoporInputCell-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PoporInputCell/PoporInputCell.modulemap";
+				PRODUCT_MODULE_NAME = PoporInputCell;
+				PRODUCT_NAME = PoporInputCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1677,11 +1685,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		292F32BCC6C2ADF27CA727CD9D62C68A /* Build configuration list for PBXNativeTarget "PoporInputCell" */ = {
+		281A2B995883D2E0D8392DACC14053F0 /* Build configuration list for PBXNativeTarget "PoporInputCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C841ACD78384958537E9B757E60C57A /* Debug */,
-				0D86E744CE18CBB8BA50D8CF9FD3F17C /* Release */,
+				BCEDEF241246771CD7EB04C4E1907C6E /* Debug */,
+				D6ACFDB74103FC375151C43B4FD16A41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1704,20 +1712,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90817634CC5D8FFE054BAB26EEC4BDBA /* Build configuration list for PBXNativeTarget "PoporUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AC2C0D3B507FBD5A5DB660563CB9D69A /* Debug */,
-				6247287300AB5D9D9634DC10FBB0BF74 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C80E76DAF8A0D431C196085CA5F5DA12 /* Build configuration list for PBXNativeTarget "Pods-PoporInputCell_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				12A9C0ED5521A2CBB04DB181472DEA0A /* Debug */,
 				81291937BE0E0699D5765DCFE8E25B97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D557C9594C39F44FD4A718D853ADBA51 /* Build configuration list for PBXNativeTarget "PoporUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D13F212834B7088EA8CF5ED0189E53 /* Debug */,
+				B1A201326376406CDF8017AB5D65A9ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

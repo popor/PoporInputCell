@@ -12,6 +12,7 @@
 
 #import "PoporInputCell.h"
 #import "PoporInputCellTool.h"
+#import "PoporLabelCell.h"
 #import "PoporTextViewCell.h"
 
 FOUNDATION_EXPORT double PoporInputCellVersionNumber;
