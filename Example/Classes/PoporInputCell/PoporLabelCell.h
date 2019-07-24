@@ -12,6 +12,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/*
+ label 支持tv动态高度
+// */
+
 typedef void(^BlockPoporLabelCell) (MASConstraintMaker * make);
 
 @interface PoporLabelCell : UITableViewCell

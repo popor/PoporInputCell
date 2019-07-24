@@ -12,6 +12,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/*
+ textView 不支持tv动态高度
+ // */
+
 typedef void(^BlockPoporTextViewCell) (MASConstraintMaker * make);
 
 @interface PoporTextViewCell : UITableViewCell

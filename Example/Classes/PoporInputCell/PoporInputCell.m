@@ -89,6 +89,7 @@ static NSString * PicPhoneNumbers      = @"0123456789";
     {
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        button.userInteractionEnabled = NO;
         
         [self addSubview:button];
         [button addTarget:self action:@selector(btAction) forControlEvents:UIControlEventTouchUpInside];
