@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <PoporUI/UIPlaceHolderTextView.h>
+#import <PoporUI/UITextView_pPlaceHolder.h>
 #import <Masonry/Masonry.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -21,7 +21,7 @@ typedef void(^BlockPoporTextViewCell) (MASConstraintMaker * make);
 @interface PoporTextViewCell : UITableViewCell
 
 @property (nonatomic, strong) UIButton * button;
-@property (nonatomic, strong) UIPlaceHolderTextView * textView;
+@property (nonatomic, strong) UITextView_pPlaceHolder * textView;
 
 @property (nonatomic, strong) UIView * view1;
 @property (nonatomic, strong) UIView * view2;

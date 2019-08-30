@@ -36,7 +36,7 @@
         button;
     });
     self.textView = ({
-        UIPlaceHolderTextView * tv = [UIPlaceHolderTextView new];
+        UITextView_pPlaceHolder * tv = [UITextView_pPlaceHolder new];
         
         [self.contentView addSubview:tv];
         

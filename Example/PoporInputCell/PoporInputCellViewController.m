@@ -9,8 +9,8 @@
 #import "PoporInputCellViewController.h"
 #import <Masonry/Masonry.h>
 #import "PoporInputCell.h"
-#import <PoporUI/UITextField+format.h>
-#import <PoporUI/UIViewController+TapEndEdit.h>
+#import <PoporUI/UITextField+pFormat.h>
+#import <PoporUI/UIViewController+pTapEndEdit.h>
 
 @interface PoporInputCellViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -440,7 +440,7 @@
     }else{
         NSString * CellID = [NSString stringWithFormat:@"%li", indexPath.row];
         
-        BOOL isInit = NO ;// = cell ? NO:YES;
+        //BOOL isInit = NO ;// = cell ? NO:YES;
         switch (indexPath.row) {
             case 21: {
                 PoporTextViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];

@@ -1,23 +1,23 @@
 PODS:
   - Masonry (1.1.0)
-  - PoporFoundation/NSObject (0.0.28)
-  - PoporFoundation/NSString (0.0.28):
-    - PoporFoundation/PrefixOs
-  - PoporFoundation/PrefixCore (0.0.28):
-    - PoporFoundation/PrefixOs
-  - PoporFoundation/PrefixOs (0.0.28)
-  - PoporInputCell (0.0.19):
+  - PoporFoundation/NSObject (1.04)
+  - PoporFoundation/NSString (1.04):
+    - PoporFoundation/Os
+  - PoporFoundation/Os (1.04)
+  - PoporFoundation/Prefix (1.04):
+    - PoporFoundation/Os
+  - PoporInputCell (1.01):
     - Masonry
     - PoporFoundation/NSString
     - PoporUI/UITextField
     - PoporUI/UITextView
-  - PoporUI/UITextField (0.0.38):
+  - PoporUI/UITextField (1.01):
     - PoporFoundation/NSString
-  - PoporUI/UITextView (0.0.38)
-  - PoporUI/UIViewController (0.0.38):
+  - PoporUI/UITextView (1.01)
+  - PoporUI/UIViewController (1.01):
     - PoporFoundation/NSObject
     - PoporFoundation/NSString
-    - PoporFoundation/PrefixCore
+    - PoporFoundation/Prefix
 
 DEPENDENCIES:
   - PoporInputCell (from `../`)
@@ -35,10 +35,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  PoporFoundation: fc84ffacadb2dd559c39146baff797b6c3d9f328
-  PoporInputCell: f75c9fcf61393ca6458f64c55fe9be171d13ea4f
-  PoporUI: 682896c851aacce3f515e9f76b5b6f7ab26e0b7b
+  PoporFoundation: f2d6a1484ed875024bcf5ab6fd404a0d7c485d10
+  PoporInputCell: 05a8f47df82b0e700181c5a7436addc449f94914
+  PoporUI: f6e8c424e4c59b489e9315e5116c9dd55f476df9
 
 PODFILE CHECKSUM: 3729f04a9c414584db2cd6a838be1079ce66ca72
 
-COCOAPODS: 1.7.4
+COCOAPODS: 1.7.5

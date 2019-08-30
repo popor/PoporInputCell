@@ -8,8 +8,8 @@
 
 #import "PoporInputCell.h"
 #import <Masonry/Masonry.h>
-#import <PoporFoundation/NSString+Tool.h>
-#import <PoporUI/UITextField+format.h>
+#import <PoporFoundation/NSString+pTool.h>
+#import <PoporUI/UITextField+pFormat.h>
 
 static NSString * PicMoneyNumbers      = @"0123456789.";
 static NSString * PicPhoneNumbers      = @"0123456789";
@@ -386,7 +386,7 @@ static NSString * PicPhoneNumbers      = @"0123456789";
         }
         case PoporInputTfTypePassword:{
             NSString * tempString=string;
-            tempString=[NSString replaceString:tempString withREG:@" " withNewString:@""];
+            tempString = [tempString replaceWithREG:@" " newString:@""];
             if (![tempString isEqualToString:string]) {
                 return NO;
             }
