@@ -9,10 +9,12 @@
 #import "PoporInputCell.h"
 #import <Masonry/Masonry.h>
 #import <PoporFoundation/NSString+pTool.h>
+#import <PoporFoundation/NSString+pIDCard.h>
 #import <PoporUI/UITextField+pFormat.h>
 
-static NSString * PicMoneyNumbers      = @"0123456789.";
-static NSString * PicPhoneNumbers      = @"0123456789";
+static NSString * PicMoneyNumbers  = @"0123456789.";
+static NSString * PicPhoneNumbers  = @"0123456789";
+static NSString * PicIdcardNumbers = @"0123456789Xx";
 
 @interface PoporInputCell () <UITextFieldDelegate>
 
@@ -355,6 +357,14 @@ static NSString * PicPhoneNumbers      = @"0123456789";
     self.tf.keyboardType    = UIKeyboardTypeNumberPad;  // 系统或第三方的数字键盘
 }
 
+// 省份证格式
+- (void)setTfTypeIdcard {
+    self.tfType = PoporInputTfTypeIdcard;
+    self.tf.secureTextEntry = NO;
+    self.tf.keyboardType    = UIKeyboardTypeNumberPad;  // 系统或第三方的数字键盘
+    self.maxLength          = 18;
+}
+
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if (self.editTFEnableBlock) {
@@ -452,10 +462,31 @@ static NSString * PicPhoneNumbers      = @"0123456789";
             if(!basicTest){
                 return NO;
             }
-            //// 使用延迟事件会在切换TF的时候 出现异常
+            // 使用延迟事件会在切换TF的时候 出现异常
             dispatch_async(dispatch_get_main_queue(), ^{
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [textField formatBankUnit:self.textGapUnit];
+                });
+            });
+            break;
+        }
+        case PoporInputTfTypeIdcard: {
+            cs = [[NSCharacterSet characterSetWithCharactersInString:PicIdcardNumbers] invertedSet];
+            NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+            BOOL basicTest = [string isEqualToString:filtered];
+            if(!basicTest){
+                return NO;
+            }
+            
+            // 使用延迟事件会在切换TF的时候 出现异常
+            dispatch_async(dispatch_get_main_queue(), ^{
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    if (self.tf.text.length == 17 && string.length>0) {
+                        if ([[self.tf.text chinaIdcardLastCode] isEqualToString:@"X"]) {
+                            self.tf.text = [NSString stringWithFormat:@"%@X", self.tf.text];
+                        }
+                    }
+                    [textField formatChinaIdcardGapWidth:self.textGapUnit];
                 });
             });
             break;

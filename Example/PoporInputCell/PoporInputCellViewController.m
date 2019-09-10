@@ -404,6 +404,27 @@
                 
                 break;
             }
+            case 12: {
+                if (!cell) {
+                    cell = [[PoporInputCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID cellType:PoporInputCellTypeLBT lbtSize:CGSizeMake(100, 40) rbtSize:CGSizeZero lGap:16 rGap:16 cellH:cellH tfH:tfH];
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    cell.tf.textAlignment = NSTextAlignmentLeft;
+                    
+                    cell.textGapUnit = 4;
+                    
+                    [cell.lBT setTitle:@"身份证" forState:UIControlStateNormal];
+                    cell.tf.placeholder = @"请输入身份证";
+                    cell.tf.text = @"11111111111111117X";
+                    [cell setTfTypeIdcard];
+                    
+                    cell.editTFBlock = ^(PoporInputCell *piCell, NSString *string) {
+                        
+                    };
+                }
+                [cell.tf formatChinaIdcardGapWidth:cell.textGapUnit];
+                
+                break;
+            }
             default:{
                 UITableViewCell * dcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
                 dcell.textLabel.text = [NSString stringWithFormat:@"%li", indexPath.row];

@@ -31,6 +31,7 @@ typedef NS_ENUM(int, PoporInputTfType) {
     PoporInputTfTypeMoneyInt,// 采用100 0000,小数点为分界线
     PoporInputTfTypeMoneyFloat,// 采用100 0000.0001,小数点为分界线
     PoporInputTfTypeBank,// 采用6266 8888 8888 88,第一位为分界线
+    PoporInputTfTypeIdcard,// 采用123456 2000 0101 000X格式
 };
 
 @class PoporInputCell;
@@ -137,6 +138,9 @@ typedef void(^PoporInputCellStringBlock) (PoporInputCell * piCell, NSString * st
 
 // 银行卡格式
 - (void)setTfTypeBank;
+
+// 省份证格式, 假如输入达到17位的时候,会自动检查最后一位是否应该为X,假如是则自动补填X.
+- (void)setTfTypeIdcard;
 
 // 最大输入数字限制
 - (void)setMaxLength:(int)maxLength maxBlock:(PoporInputCellIntBlock)maxBlock;
