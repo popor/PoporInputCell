@@ -392,6 +392,13 @@ static NSString * PicIdcardNumbers = @"0123456789Xx";
             if(!basicTest){
                 return NO;
             }
+            
+            NSString * tString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+            // 只允许一个小数点
+            if ([tString countOccurencesOfString:@"."]>1) {
+                return NO;
+            }
+            
             break;
         }
         case PoporInputTfTypePassword:{
@@ -443,7 +450,7 @@ static NSString * PicIdcardNumbers = @"0123456789Xx";
                 return NO;
             }
             NSString * tString = [textField.text stringByReplacingCharactersInRange:range withString:string];
-            
+            // 只允许一个小数点
             if ([tString countOccurencesOfString:@"."]>1) {
                 return NO;
             }
