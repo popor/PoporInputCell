@@ -317,7 +317,7 @@ static NSString * PicIdcardNumbers = @"0123456789Xx";
 
 - (void)setTfTypeNumberFloat {
     self.tf.secureTextEntry = NO;
-    self.tf.keyboardType    = UIKeyboardTypeNumberPad;
+    self.tf.keyboardType    = UIKeyboardTypeDecimalPad;
     self.tfType             = PoporInputTfTypeNumberFloat;
 }
 
