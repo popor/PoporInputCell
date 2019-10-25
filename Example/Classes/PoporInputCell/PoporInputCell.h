@@ -15,6 +15,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 static int PoporInputInnerGap = 5;
+#define PoporInputLbtTfGap (PoporInputInnerGap*2+1)
 
 typedef NS_OPTIONS(NSUInteger, PoporInputCellType) {
     PoporInputCellTypeLBT      = 1 << 0,

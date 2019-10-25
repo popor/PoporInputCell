@@ -225,7 +225,7 @@ static NSString * PicIdcardNumbers = @"0123456789Xx";
     
     [self.tf setContentHuggingPriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
     [self.tf mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.lBT.mas_right).offset(gap*2 + 1);
+        make.left.mas_equalTo(self.lBT.mas_right).offset(PoporInputLbtTfGap);
         
         if (self.cellH>self.tfH && self.tfH>0) {
             float gap = (self.cellH-self.tfH)/2.0f;
