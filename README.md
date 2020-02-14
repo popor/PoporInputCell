@@ -28,6 +28,8 @@ pod 'PoporInputCell'
 
 </p>
 
+1.05
+移除多余的make.height.mas_equalTo()
 
 ## Author
 

@@ -117,7 +117,7 @@ static NSString * PicIdcardNumbers = @"0123456789Xx";
                     float gap = (self.cellH-self.lbtSize.height)/2.0f;
                     
                     make.top.mas_equalTo(gap);
-                    make.height.mas_equalTo(self.lbtSize.height);
+                    //make.height.mas_equalTo(self.lbtSize.height);
                     make.bottom.mas_equalTo(-gap);
                     
                 }else{
@@ -136,7 +136,7 @@ static NSString * PicIdcardNumbers = @"0123456789Xx";
                     float gap = (self.cellH-self.lbtSize.height)/2.0f;
                     
                     make.top.mas_equalTo(gap);
-                    make.height.mas_equalTo(self.lbtSize.height);
+                    //make.height.mas_equalTo(self.lbtSize.height);
                     make.bottom.mas_equalTo(-gap);
                     
                 }else{
@@ -185,7 +185,7 @@ static NSString * PicIdcardNumbers = @"0123456789Xx";
                     float gap = (self.cellH-self.rbtSize.height)/2.0f;
                     
                     make.top.mas_equalTo(gap);
-                    make.height.mas_equalTo(self.rbtSize.height);
+                    //make.height.mas_equalTo(self.rbtSize.height);
                     make.bottom.mas_equalTo(-gap);
                     
                 }else{
@@ -205,7 +205,7 @@ static NSString * PicIdcardNumbers = @"0123456789Xx";
                     float gap = (self.cellH-self.rbtSize.height)/2.0f;
                     
                     make.top.mas_equalTo(gap);
-                    make.height.mas_equalTo(self.rbtSize.height);
+                    //make.height.mas_equalTo(self.rbtSize.height);
                     make.bottom.mas_equalTo(-gap);
                     
                 }else{
@@ -230,7 +230,7 @@ static NSString * PicIdcardNumbers = @"0123456789Xx";
         if (self.cellH>self.tfH && self.tfH>0) {
             float gap = (self.cellH-self.tfH)/2.0f;
             make.top.mas_equalTo(gap);
-            make.height.mas_equalTo(self.tfH);
+            //make.height.mas_equalTo(self.tfH);
             make.bottom.mas_equalTo(-gap);
             
         } else {
